@@ -1,7 +1,8 @@
 *
+!.gitignore
+!README.md
+!bin2mem.sh
 !src
 !src/**
 !img
 !img/**
-!README.md
-!.gitignore
