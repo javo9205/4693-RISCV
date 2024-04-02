@@ -21,7 +21,7 @@ module riscv_top(
     input RST,
     output [15:0] led
 );
-    localparam ROM_FILE="phase3.mem";
+    localparam ROM_FILE="test8.mem";
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
     localparam NUM_SLAVES=1;

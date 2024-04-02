@@ -36,7 +36,7 @@ module riscv_tb;
         RST = 0;
         #5
         RST = 1;
-        for (i=0; i<100; i=i+1)
+        for (i=0; i<1000; i=i+1)
             #2;
         $finish;
     end

@@ -3,10 +3,10 @@
 
 FMT='2/2 "%04X" "\n"'
 if [ -z "$1" ]; then
-    cat | hexdump -ve "$FMT" #| sed -E 's/(....)(....)$/\2\1/' 
+    cat | hexdump -ve "$FMT" | sed -E 's/(....)(....)$/\2\1/' 
 
 else
-    hexdump -ve "$FMT" "$1" #| sed -E 's/(....)(....)$/\2\1/' 
+    hexdump -ve "$FMT" "$1" | sed -E 's/(....)(....)$/\2\1/' 
 fi
 
 

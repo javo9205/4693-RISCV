@@ -1,5 +1,10 @@
 #!/bin/bash
 
+table() {
+    printf '%s%10s | %-25s | %1s | %07s | %03s | %07s | %s\n' "$1" "$2" "$3" "$4" "$5" "$6" "$7" "$8"
+}
+
+
 i_parse() { echo ${instr:$1:$(($2 - $1 + 1))} | rev; }
 
 to_reg() { echo "x$(echo "obase=10; ibase=2; $1" | bc)"; }
@@ -54,7 +59,7 @@ decode() {
     imm=$(to_immed $fmt)
     immed="0x$(echo "obase=16; ibase=2; $imm" | bc)"
     instr=$(printf 0x%08x $(echo "obase=10; ibase=2; $(i_parse 0 31)" | bc))
-    asm="------------------------"
+    asm="-------------------------"
     desc=""
     
     case $fmt in
@@ -121,25 +126,28 @@ decode() {
                 110) op=bltu; desc="if (rs1 <  rs2) PC += imm";;
                 111) op=bgeu; desc="if (rs1 >= rs2) PC += imm";;
             esac
-            asm="$op $rs1, $rs2, LABEL";;
+            asm="$op $rs1, $rs2, $immed";;
         U)
             case "$opcode" in
                 0110111) op=lui;   desc="rd = imm << 12";;
                 0010111) op=auipc; desc="rd = PC + (imm << 12)";;
             esac
             asm="$op $rd, $immed";;
-        J)  op=jal; desc="rd = PC+4; PC += imm"; asm="jal $rd, LABEL";;
+        J)  op=jal; desc="rd = PC+4; PC += imm"; asm="jal $rd, $immed";;
     esac
 
-    if [[ $asm == "addi x0, x0, 0x0" ]]; then asm="NOP"; fi
-    printf '%s%10s | %-24s | %1s | %07s | %03s | %07s | %s\n' "$2" $instr "$asm" "$fmt" $opcode $funct3 $funct7 "$desc"
+    if [[ $asm == "addi x0, x0, 0x0" ]]; then asm="NOP"
+    elif [[ -z "$desc" ]] && [[ $opcode == "0111111" ]]; then asm="----------------- HALT --"; fi
 
+    table "$2" $instr "$asm" "$fmt" $opcode $funct3 $funct7 "$desc"
 }
 
 if [[ -z "$1" ]]; then
     i=0
+    table "PC Counter:" " Instruction" "Assembly" "T" "Opcode" "FN3" "  FN7  " "Description"
+    echo -------------------------------------------------------------------------------------------------------
     while IFS= read -r line; do
-        decode $line "$(printf '%08x: ' $i)"
+        decode $line "$(printf '0x%08x:  ' $i)"
         i=$((i+4))
     done
 else
