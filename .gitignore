@@ -1,8 +1,11 @@
 *
 !.gitignore
 !README.md
-!bin2mem.sh
 !src
 !src/**
 !img
 !img/**
+!tools
+!tools/**
+!tests
+!tests/**

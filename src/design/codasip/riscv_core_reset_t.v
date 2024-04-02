@@ -17,7 +17,7 @@
  *  \brief   Contains module definition of the 'riscv_core_reset_t' functional unit.
  */
 
-module riscv_core_reset_t(
+module riscv_core_reset_t #(START_ADDRESS=32'h00001000)(
     input  wire ACT,
     output wire [31:0] r_pc_D,
     output wire r_pc_WE
@@ -25,7 +25,7 @@ module riscv_core_reset_t(
     // data-path code:
     // /home/project/riscv/model/ca/events/ca_main_reset.codal:34:9
     // r_pc.write((int32)(0x1000));
-    assign r_pc_D = (ACT == 1'b1) ? 32'h00001000 : 32'h00000000;
+    assign r_pc_D = (ACT == 1'b1) ? START_ADDRESS : 32'h00000000;
     // /home/project/riscv/model/ca/events/ca_main_reset.codal:34:9
     // r_pc.write((int32)(0x1000));
     assign r_pc_WE = (ACT == 1'b1) ? 1'b1 : 1'b0;

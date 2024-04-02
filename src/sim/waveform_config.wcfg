@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="25.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="37.001 ns"></ZoomEndTime>
-      <Cursor1Time time="28.020 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="13.181 ns"></ZoomEndTime>
+      <Cursor1Time time="6.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
-      <ValueColumnWidth column_width="96"></ValueColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="4" />
+   <WVObjectSize size="5" />
    <wvobject type="logic" fp_name="/riscv_tb/CLK">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -41,7 +41,12 @@
    <wvobject type="group" fp_name="group144">
       <obj_property name="label">Instruction</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_instr">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_id_instr[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_id_instr[31:0]</obj_property>
+         <obj_property name="label">Instruction</obj_property>
+      </wvobject>
       <wvobject type="vbus" fp_name="vbus221">
          <obj_property name="label">opcode</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -664,5 +669,13 @@
             </wvobject>
          </wvobject>
       </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">RAM[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">RAM[0:31][31:0]</obj_property>
+      <obj_property name="label">Register File</obj_property>
+      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
 </wave_config>

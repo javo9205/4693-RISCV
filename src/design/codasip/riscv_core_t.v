@@ -17,7 +17,7 @@
  *  \brief   Contains module definition of the 'riscv_core_t' ASIP core.
  */
 
-module riscv_core_t(
+module riscv_core_t #(START_ADDRESS=32'h0000100)(
     input  wire CLK,
     input  wire RST,
     input  wire [31:0] if_code_HRDATA,
@@ -904,7 +904,7 @@ module riscv_core_t(
     // register instance:
     d_ff_rst_we_t #(
         .BIT_WIDTH(32'sd32),
-        .DEFAULT_VALUE(32'h00001000),
+        .DEFAULT_VALUE(32'h0),
         .RESET_LEVEL(1'b0),
         .RESET_SYNC(1'b0)
     ) r_pc (
@@ -977,7 +977,7 @@ module riscv_core_t(
     );
 
     // functional unit instance:
-    riscv_core_reset_t reset (
+    riscv_core_reset_t #(START_ADDRESS) reset (
         .ACT(codasip_startup_ctrl_reset_ACT_wire),
         .r_pc_D(reset_r_pc_D_wire),
         .r_pc_WE(reset_r_pc_WE_wire)

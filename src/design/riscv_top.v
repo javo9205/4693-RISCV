@@ -8,8 +8,7 @@
  *  All Rights Reserved.
  *  This file is part of the Codasip Studio product. No part of the Studio product, including this
  *  file, may be use, copied, modified, or distributed except in accordance with the terms contained
- *  in Codasip license agreement under which you obtained this file.
- * 
+ *  in Codasip license agreement under which you obtained this file.  * 
  *  \file
  *  \date    2024-03-30
  *  \author  Codasip (c) HW generator
@@ -22,7 +21,7 @@ module riscv_top(
     input RST,
     output [15:0] led
 );
-
+    localparam ROM_FILE="phase3.mem";
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
     localparam NUM_SLAVES=1;
@@ -106,7 +105,7 @@ module riscv_top(
 
     ahb_cache #(
         .INITIALIZE(1),
-        .INIT_FILE("icache.mem")
+        .INIT_FILE(ROM_FILE)
     ) icache(
         .HCLK(CLK),
         .HRESETn(RST),
@@ -143,7 +142,7 @@ module riscv_top(
 
     // child instances inside ASIP top:
     // ASIP instance:
-    riscv32ia riscv  (
+    riscv32ia #(32'h34) riscv (
         .CLK(CLK),
         .RST(RST),
         .if_code_HADDR (i_haddr ),
