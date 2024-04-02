@@ -4,12 +4,14 @@
 The proposed topic of research is to create a simulated RISC-V CPU using the “Boolean Board” FPGA from Xilinx. The CPU must be able to handle RISC-V instructions, as well as utilize the board interfaces like the on-board LEDs and switches. We will also be adding the capability to handle interrupts and IO interfaces for the UART port, buttons, etc. To this end, we will be implementing a bus interface and interrupt controller. The overall structure is outlined in the block diagram as shown in Figure 1.
 
 ![Hardware Block Diagram](./img/block_diagram.png)
+
 *Figure 1. Hardware Block Diagram*
 
 ## CODAL to Verilog:
 We are reusing a RISC-V processor implementation which we have written in CODAL for a Computer Organization class. We have used Codasip to convert this implementation into an RTL language called Verilog. The Verilog files will be implemented on an FPGA using the Vivado software from Xilinx. The processor schematic of the RISC-V processor as seen by Vivado is shown in Figure 2. We will also need to configure the constraint files so that the clock signal and other external ports are mapped appropiately.
 
 ![RISC-V Core](./img/riscv-core.png)
+
 *Figure 2. Vivado Generated Block Diagram of RISC-V Core*
 
 ## Memory Mapped I/O
