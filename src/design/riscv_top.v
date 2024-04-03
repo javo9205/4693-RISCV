@@ -16,11 +16,7 @@
  *  \brief   Contains module definition of the 'riscv_top' ASIP top.
  */
 
-module riscv_top(
-    input CLK,
-    input RST,
-    output [15:0] led
-);
+module riscv_top(input CLK, RST, output [15:0] LED);
     localparam ROM_FILE="test3.mem";
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
@@ -64,9 +60,17 @@ module riscv_top(
 	wire [0:0] d_hresp;
 	wire [0:0] d_hready;
 
+    genvar x;
 
     assign i_hwdata = 32'h0;
-    assign led = i_haddr[15:0];
+    assign LED[1:0] = 2'b0;
+    assign LED[15:14] = 2'b0;
+    
+    generate
+        for (x=2; x<14; x=x+1) begin
+            assign LED[x] = i_haddr[15-x];
+        end
+    endgenerate
 	
 //	ahb_bus #(
 //	   .NUM_SLAVES(1),

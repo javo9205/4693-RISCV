@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="900.740 ns"></ZoomStartTime>
-      <ZoomEndTime time="914.961 ns"></ZoomEndTime>
-      <Cursor1Time time="879.980 ns"></Cursor1Time>
+      <ZoomStartTime time="842.320 ns"></ZoomStartTime>
+      <ZoomEndTime time="858.081 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="244"></NameColumnWidth>
+      <NameColumnWidth column_width="240"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="14" />
    <wvobject type="logic" fp_name="/riscv_tb/CLK">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -377,8 +377,8 @@
       </wvobject>
       <wvobject type="array" fp_name="/riscv_tb/top/dcache/index">
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">index[13:0]</obj_property>
-         <obj_property name="ObjectShortName">index[13:0]</obj_property>
+         <obj_property name="ElementShortName">index[12:0]</obj_property>
+         <obj_property name="ObjectShortName">index[12:0]</obj_property>
          <obj_property name="label">INDEX</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <obj_property name="CustomSignalColor">#A52A2A</obj_property>
@@ -430,9 +430,10 @@
          <obj_property name="ElementShortName">write</obj_property>
          <obj_property name="ObjectShortName">write</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/commit_data">
-         <obj_property name="ElementShortName">commit_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">commit_data[31:0]</obj_property>
-      </wvobject>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/led">
+      <obj_property name="ElementShortName">led[15:0]</obj_property>
+      <obj_property name="ObjectShortName">led[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>
