@@ -47,7 +47,8 @@ module ahb_cache #(
     // =========================================================================
     localparam GRANULARITY  = $clog2(DATA_WIDTH / 8);    // 2^x byte addressable
     localparam ADDRESSABLE  = (1024 * SIZE_IN_KB) / (DATA_WIDTH / 8);
-    localparam ADDR_PREFIX  = ADDR_WIDTH - GRANULARITY;  // # bits to index memory
+    localparam ADDR_PREFIX  = ADDR_WIDTH - GRANULARITY;  // addr bits to get index
+    localparam INDEX_WIDTH  = $clog2(ADDRESSABLE);       // # bits to index memory
     localparam SIZE_IN_BITS = DATA_WIDTH * ADDRESSABLE;  // Size of address space
 
     // =========================================================================
@@ -64,7 +65,8 @@ module ahb_cache #(
     wire [DATA_WIDTH-1:0]  bitmask;   // Byte mask based on HSIZE
     wire [GRANULARITY+2:0] bitshift;  // Shift amount based on HADDR and HSIZE
     wire [ADDR_WIDTH-1:0]  real_addr; // Effective address starting from zero
-    wire [ADDR_PREFIX-1:0] prefix;    // Used to index into memory buffer 
+    wire [ADDR_PREFIX-1:0] prefix;    // Prefix of address for index 
+    wire [INDEX_WIDTH-1:0] index;     // Used to index into memory buffer
 
     // =========================================================================
     // Intermediate Data Variables used for calculation                       //
@@ -73,6 +75,7 @@ module ahb_cache #(
     wire [DATA_WIDTH-1:0] read_data;   // load_data w/ size mask applied
     wire [DATA_WIDTH-1:0] return_data; // Data which will be returned in hrdata
     wire [DATA_WIDTH-1:0] old_data;    // load_data w/ inverted mask applied
+    wire [DATA_WIDTH-1:0] new_data;    // hwdata shifted to correct position
     wire [DATA_WIDTH-1:0] write_data;  // Combination of old_data & HWDATA
     wire [DATA_WIDTH-1:0] commit_data; // Data which will be commited to memory
 
@@ -80,9 +83,9 @@ module ahb_cache #(
     // Propagation Variables to remember data from the previous cycle         //
     // =========================================================================
     reg write;    // Flag: True if we are doing a write operation
-    reg [ADDR_PREFIX-1:0] prev_addr;
     reg [DATA_WIDTH -1:0] prev_data;
-    reg [GRANULARITY+2:0] prev_shift;
+    reg [INDEX_WIDTH-1:0] prev_index;
+    reg [GRANULARITY+2:0] prev_mask;
     
     // =========================================================================
     // Control signal derivation                                              //
@@ -90,7 +93,7 @@ module ahb_cache #(
     // Are we transfering data?
     assign transfer = hsel & htrans[1] & HRESETn;
     // Do we need to forward data from the write buffer?
-    assign forward = write & (prev_addr == prefix);
+    assign forward = write & (prev_index == index);
     // Are we reading data?
     assign read = transfer & ~hwrite;
     // Subtract start address to get real_addr address into memory array
@@ -113,22 +116,26 @@ module ahb_cache #(
     // =========================================================================
     // Data Derivation                                                        //
     // =========================================================================
-    // Determine index into memory buffer
+    // Cut off unneeded bits from address for loading memory
     assign prefix = real_addr[ADDR_WIDTH-1:GRANULARITY];
+    // Use prefix as index if within range
+    assign index  = (hresp) ? {INDEX_WIDTH{1'bx}} : prefix;
     // Determine shift amt to place data correctly from least significant bits
     assign bitshift = (GRANULARITY) ? {real_addr[GRANULARITY-1:0],3'b000} : 0;
     // Implement data forwarding. Either from buffer or from write in progress
-    assign load_data = (forward) ? write_data : MEMORY[prefix];
+    assign load_data = (forward) ? write_data : MEMORY[index];
+    // Shift data coming in from hwdata
+    assign new_data = (hwdata) & prev_mask;
     // If address in range: shift mask to correct pos then apply to load data
-    assign old_data  = (hresp) ? 0 : load_data & ~(bitmask << bitshift);
+    assign old_data  = (hresp) ? {DATA_WIDTH{1'b0}} : load_data & ~(bitmask << bitshift);
     // If address in range: shift requested data to LSB and apply mask
-    assign read_data = (hresp) ? 0 : (load_data >> bitshift) & bitmask;
+    assign read_data = (hresp) ? {DATA_WIDTH{1'b0}} : (load_data >> bitshift) & bitmask;
     // If a write signaled, combine old data with new data to form write data
-    assign write_data = (prev_data) | (hwdata << prev_shift);
+    assign write_data = prev_data | hwdata;
     // Only return data if it is currently being requested
     assign return_data = (read) ? read_data : {DATA_WIDTH{1'b0}};
     // Only commit data if a write has been signalled
-    assign commit_data = (write) ? write_data : MEMORY[prev_addr];
+    assign commit_data = (write) ? write_data : MEMORY[prev_index];
 
     // =========================================================================
     // Operations w/ 1-cycle propogation delay                                //
@@ -138,14 +145,14 @@ module ahb_cache #(
         // Propagate info needed to capture/process write data in next cycle  //
         // =====================================================================
         write      <= transfer & hwrite;
-        prev_addr  <= prefix;
+        prev_index <= index;
         prev_data  <= old_data;
-        prev_shift <= bitshift;
+        prev_mask  <= (bitmask << bitshift);
         // =====================================================================
         // Process end and commit data                                        //
         // =====================================================================
-        hrdata <= return_data;            // READ
-        MEMORY[prev_addr] <= commit_data; // WRITE
+        hrdata <= return_data;             // READ
+        MEMORY[prev_index] <= commit_data; // WRITE
     end
     
     // =========================================================================

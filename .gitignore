@@ -9,3 +9,5 @@
 !tools/**
 !tests
 !tests/**
+
+*.swp

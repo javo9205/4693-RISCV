@@ -471,7 +471,7 @@ _start:
         li      x6,  0x78
         sb      x6,  0x7CC(x0)
         lw      x6,  0x7CC(x0)
-        beq     x6,  x21, SW_TEST
+        bne     x6,  x21, LW_FAIL
     /*--------------------------------------------------*/
     /* TEST 4: Store then Load 0xDEADBEEF
     /*--------------------------------------------------*/
