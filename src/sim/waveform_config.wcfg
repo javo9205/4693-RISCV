@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="477.506 ns"></ZoomStartTime>
-      <ZoomEndTime time="491.647 ns"></ZoomEndTime>
-      <Cursor1Time time="484.386 ns"></Cursor1Time>
+      <ZoomStartTime time="900.740 ns"></ZoomStartTime>
+      <ZoomEndTime time="914.961 ns"></ZoomEndTime>
+      <Cursor1Time time="879.980 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="248"></NameColumnWidth>
+      <NameColumnWidth column_width="244"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="13" />
    <wvobject type="logic" fp_name="/riscv_tb/CLK">
       <obj_property name="ElementShortName">CLK</obj_property>
       <obj_property name="ObjectShortName">CLK</obj_property>
@@ -210,14 +210,6 @@
          <obj_property name="CustomSignalColor">#00FFFF</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_id_brnch_sel">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_brnch_sel</obj_property>
-         <obj_property name="ObjectShortName">s_id_brnch_sel</obj_property>
-         <obj_property name="label">branch_sel</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
       <wvobject type="vbus" fp_name="vbus3552">
          <obj_property name="label">PC Source Control Signals</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -257,6 +249,37 @@
             <obj_property name="label">s_id_pcsrc ( jal )</obj_property>
          </wvobject>
       </wvobject>
+      <wvobject type="vbus" fp_name="vbus3562">
+         <obj_property name="label">Pipeline Flush Control Signals</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_id_clear">
+            <obj_property name="ElementShortName">s_id_clear</obj_property>
+            <obj_property name="ObjectShortName">s_id_clear</obj_property>
+            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_ex_clear">
+            <obj_property name="ElementShortName">s_ex_clear</obj_property>
+            <obj_property name="ObjectShortName">s_ex_clear</obj_property>
+            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_me_clear">
+            <obj_property name="ElementShortName">s_me_clear</obj_property>
+            <obj_property name="ObjectShortName">s_me_clear</obj_property>
+            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_wb_clear">
+            <obj_property name="ElementShortName">s_wb_clear</obj_property>
+            <obj_property name="ObjectShortName">s_wb_clear</obj_property>
+            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
    </wvobject>
    <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM">
       <obj_property name="DisplayName">label</obj_property>
@@ -266,14 +289,41 @@
       <obj_property name="CustomSignalColor">#808080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM[1]">
+      <obj_property name="ElementShortName">[1][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM[6]">
+      <obj_property name="ElementShortName">[6][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM[7]">
+      <obj_property name="ElementShortName">[7][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM[10]">
+      <obj_property name="ElementShortName">[10][31:0]</obj_property>
+      <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+   </wvobject>
    <wvobject type="group" fp_name="group218">
       <obj_property name="label">Cache</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hsize">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">hsize[2:0]</obj_property>
+         <obj_property name="ObjectShortName">hsize[2:0]</obj_property>
+         <obj_property name="label">Cache Transfer Size</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
       <wvobject type="array" fp_name="/riscv_tb/top/dcache/htrans">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">htrans[1:0]</obj_property>
          <obj_property name="ObjectShortName">htrans[1:0]</obj_property>
-         <obj_property name="label">Cache Transfer</obj_property>
+         <obj_property name="label">Cache Transfer State</obj_property>
          <obj_property name="CustomSignalColor">#FFA500</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
@@ -290,7 +340,7 @@
          <obj_property name="ElementShortName">hwdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">hwdata[31:0]</obj_property>
          <obj_property name="label">Cache Write Data</obj_property>
-         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/riscv_tb/top/dcache/hrdata">
@@ -298,15 +348,7 @@
          <obj_property name="ElementShortName">hrdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">hrdata[31:0]</obj_property>
          <obj_property name="label">Cache Read Data</obj_property>
-         <obj_property name="CustomSignalColor">#FFA500</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hsize">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">hsize[2:0]</obj_property>
-         <obj_property name="ObjectShortName">hsize[2:0]</obj_property>
-         <obj_property name="label">Cache Transfer Size</obj_property>
-         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/riscv_tb/top/dcache/transfer">
@@ -339,7 +381,7 @@
          <obj_property name="ObjectShortName">index[13:0]</obj_property>
          <obj_property name="label">INDEX</obj_property>
          <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/riscv_tb/top/dcache/load_data">
@@ -347,14 +389,13 @@
          <obj_property name="ElementShortName">load_data[31:0]</obj_property>
          <obj_property name="ObjectShortName">load_data[31:0]</obj_property>
          <obj_property name="label">MEMORY[INDEX]</obj_property>
-         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group2863">
       <obj_property name="label">dcache handler</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/riscv_tb/top/dcache/bitmask">
          <obj_property name="ElementShortName">bitmask[31:0]</obj_property>
          <obj_property name="ObjectShortName">bitmask[31:0]</obj_property>

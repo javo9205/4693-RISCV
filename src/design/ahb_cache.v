@@ -62,7 +62,8 @@ module ahb_cache #(
     wire read;     // Flag: True if we are doing a read operation
     wire transfer; // Flag: True if currently transferring data
     wire forward;  // Flag: True if we need to forward data from write buffer
-    wire [DATA_WIDTH-1:0]  bitmask;   // Byte mask based on HSIZE
+    wire [DATA_WIDTH-1:0]  template;  // Byte mask template based on HSIZE
+    wire [DATA_WIDTH-1:0]  bitmask;   // Byte mask shifted to correct position
     wire [GRANULARITY+2:0] bitshift;  // Shift amount based on HADDR and HSIZE
     wire [ADDR_WIDTH-1:0]  real_addr; // Effective address starting from zero
     wire [ADDR_PREFIX-1:0] prefix;    // Prefix of address for index 
@@ -102,8 +103,8 @@ module ahb_cache #(
     assign hready = 1;
     // Send ERROR(1) if addr out of range when transferring, else send OKAY(0)
     assign hresp = transfer & (real_addr >= SIZE_IN_BITS);
-    // Determine bitmask to use based on how many bytes are being transferred
-    assign bitmask =
+    // Determine bitmask template to use based on how many bytes are being transferred
+    assign template =
         (hsize == 3'b000) ? {   8{1'b1}} :
         (hsize == 3'b001) ? {  16{1'b1}} :
         (hsize == 3'b010) ? {  32{1'b1}} :
@@ -122,14 +123,16 @@ module ahb_cache #(
     assign index  = (hresp) ? {INDEX_WIDTH{1'bx}} : prefix;
     // Determine shift amt to place data correctly from least significant bits
     assign bitshift = (GRANULARITY) ? {real_addr[GRANULARITY-1:0],3'b000} : 0;
+    // Shift template to correct position to get the bitmask
+    assign bitmask  = template << bitshift;
     // Implement data forwarding. Either from buffer or from write in progress
     assign load_data = (forward) ? write_data : MEMORY[index];
     // Shift data coming in from hwdata
     assign new_data = (hwdata) & prev_mask;
     // If address in range: shift mask to correct pos then apply to load data
-    assign old_data  = (hresp) ? {DATA_WIDTH{1'b0}} : load_data & ~(bitmask << bitshift);
+    assign old_data  = (hresp) ? {DATA_WIDTH{1'b0}} : load_data & ~bitmask;
     // If address in range: shift requested data to LSB and apply mask
-    assign read_data = (hresp) ? {DATA_WIDTH{1'b0}} : (load_data >> bitshift) & bitmask;
+    assign read_data = (hresp) ? {DATA_WIDTH{1'b0}} : load_data &  bitmask;
     // If a write signaled, combine old data with new data to form write data
     assign write_data = prev_data | hwdata;
     // Only return data if it is currently being requested
@@ -147,7 +150,7 @@ module ahb_cache #(
         write      <= transfer & hwrite;
         prev_index <= index;
         prev_data  <= old_data;
-        prev_mask  <= (bitmask << bitshift);
+        prev_mask  <= bitmask;
         // =====================================================================
         // Process end and commit data                                        //
         // =====================================================================
