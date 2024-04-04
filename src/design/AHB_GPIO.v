@@ -114,8 +114,9 @@ module AHB_GPIO #(
         end
     endgenerate
     always @(posedge HCLK)
-        for (j=0; j<16; j=j+1)
+        for (j=0; j<16; j=j+1) begin
             GPIO[0][j] <= SW_Sync[j];
+        end
     assign read_only[0] = 1'b1;
     // Map LEDs to the same Register
     assign LED = GPIO[1][15:0];
@@ -206,11 +207,9 @@ module AHB_GPIO #(
         if (write & ~illegal)
             GPIO[prev_index] <= write_data;
     end
-    
-    // =========================================================================
-    // Simulation Handling                                                    //
-    // =========================================================================
 endmodule
+    
+
 
 module Clock_Boundary #(SYNC_WIDTH=2) (
     input CLK,

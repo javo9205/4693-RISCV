@@ -28,8 +28,8 @@ module riscv_top(
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
     localparam NUM_SLAVES=2;
-    localparam SLAVE_BASE_ADDR = {32'h0000,32'h8000};
-    localparam SLAVE_LAST_ADDR = {32'h7FFF,32'h8100};
+    localparam SLAVE_BASE_ADDR = {32'h8000,32'h0000};
+    localparam SLAVE_LAST_ADDR = {32'h8002,32'h7FFF};
 
 	wire [ADDR_WIDTH-1:0] m_haddr;
 	wire [DATA_WIDTH-1:0] m_hrdata;
@@ -42,18 +42,6 @@ module riscv_top(
 	wire [2:0] m_hsize;
 	wire [0:0] m_hresp;
 	wire [0:0] m_hready;
-
-	wire [ADDR_WIDTH-1:0] i_haddr;
-	wire [DATA_WIDTH-1:0] i_hrdata;
-	wire [DATA_WIDTH-1:0] i_hwdata;
-	wire [0:0] i_hmastlock;
-	wire [0:0] i_hwrite;
-	wire [2:0] i_hburst;
-	wire [1:0] i_htrans;
-	wire [3:0] i_hprot;
-	wire [2:0] i_hsize;
-	wire [0:0] i_hresp;
-	wire [0:0] i_hready;
 
     localparam N = NUM_SLAVES;
 	wire [N*ADDR_WIDTH-1:0] s_haddr;
@@ -68,6 +56,18 @@ module riscv_top(
 	wire [N*3-1:0] s_hsize;
 	wire [N*1-1:0] s_hresp;
 	wire [N*1-1:0] s_hready;
+
+	wire [ADDR_WIDTH-1:0] i_haddr;
+	wire [DATA_WIDTH-1:0] i_hrdata;
+	wire [DATA_WIDTH-1:0] i_hwdata;
+	wire [0:0] i_hmastlock;
+	wire [0:0] i_hwrite;
+	wire [2:0] i_hburst;
+	wire [1:0] i_htrans;
+	wire [3:0] i_hprot;
+	wire [2:0] i_hsize;
+	wire [0:0] i_hresp;
+	wire [0:0] i_hready;
 
     genvar x;
 
@@ -102,7 +102,7 @@ module riscv_top(
     );
 	
 	AHB_Bus #(
-	   .NUM_SLAVES(1),
+	   .NUM_SLAVES(NUM_SLAVES),
 	   .DATA_WIDTH(DATA_WIDTH),
 	   .ADDR_WIDTH(ADDR_WIDTH),
 	   .SLAVE_BASE_ADDR(SLAVE_BASE_ADDR),
@@ -126,7 +126,7 @@ module riscv_top(
 	   .s_hwdata_out (s_hwdata),
 	   .s_hrdata_in  (s_hrdata),
 	   .s_hsel_out   (s_hsel  ),
-	   .s_hmastlock_out (d_hmastlock),
+	   .s_hmastlock_out (s_hmastlock),
 	   .s_hwrite_out (s_hwrite),
 	   .s_htrans_out (s_htrans),
 	   .s_hsize_out  (s_hsize ),
@@ -156,7 +156,9 @@ module riscv_top(
         .hready(i_hready)
     );
 
-    AHB_Cache dcache(
+    AHB_Cache #(
+        .START_ADDR(SLAVE_BASE_ADDR[31:0])
+    ) dcache (
         .HCLK(CLK),
         .HRESETn(RST),
         .haddr (s_haddr [31:0]),
@@ -169,8 +171,8 @@ module riscv_top(
         .hsize (s_hsize [2:0]),
         .hburst(s_hburst[2:0]),
         .hprot (s_hprot [3:0]),
-        .hresp (s_hresp [1]),
-        .hready(s_hready[1])
+        .hresp (s_hresp [0]),
+        .hready(s_hready[0])
     );
     
     AHB_GPIO #(
@@ -185,14 +187,14 @@ module riscv_top(
         .hwdata(s_hwdata[1*32+:32]),
         .hrdata(s_hwdata[1*32+:32]),
         .hwrite(s_hwrite[1]),
-        .hmastlock(s_hmastlock[i]),
+        .hmastlock(s_hmastlock[1]),
         .hsel  (s_hsel  [1]),
         .htrans(s_htrans[1*2+:2]),
         .hsize (s_hsize [1*3+:3]),
         .hburst(s_hburst[1*3+:3]),
-        .hprot (s_hburst[1*4+:4]),
-        .hresp (s_hresp [i]),
-        .hready(s_hready[i])
+        .hprot (s_hprot [1*4+:4]),
+        .hresp (s_hresp [1]),
+        .hready(s_hready[1])
     );
 
 endmodule // riscv_top

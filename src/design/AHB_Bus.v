@@ -60,8 +60,8 @@ module AHB_Bus #(
     integer j;
     
     wire [NUM_SLAVES-1:0] bypass;
-    wire [NUM_SLAVES-1:0] gte_base;
-    wire [NUM_SLAVES-1:0] lte_last;
+    wire [NUM_SLAVES-1:0] gte_min;
+    wire [NUM_SLAVES-1:0] lte_max;
 
     // =====================================================
     // ROUTE MASTER --> SLAVE
@@ -71,9 +71,9 @@ module AHB_Bus #(
         // (Does not support overlapping ranges unless SEL_BYPASS = 1)
         for (i=0; i<NUM_SLAVES; i=i+1) begin : ahb_decoder
             assign bypass  [i] = (~SEL_BYPASS) ?  1  : (m_hsel_in == i) ? 1 : 0;
-            assign gte_base[i] = (m_haddr_in >= SLAVE_BASE_ADDR[i*32+:32]) ? 1 : 0;
-            assign lte_last[i] = (m_haddr_in <= SLAVE_LAST_ADDR[i*32+:32]) ? 1 : 0;
-            assign s_hsel_out  [i] = bypass & gte_base & lte_last;
+            assign gte_min[i] = (m_haddr_in >= SLAVE_BASE_ADDR[i*32+:32]) ? 1 : 0;
+            assign lte_max[i] = (m_haddr_in <= SLAVE_LAST_ADDR[i*32+:32]) ? 1 : 0;
+            assign s_hsel_out  [i] = bypass[i] & gte_min[i] & lte_max[i];
             assign s_hready_out[i] = m_hready_out;
         end
 
