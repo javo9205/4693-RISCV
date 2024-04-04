@@ -60,9 +60,10 @@ module ahb_cache #(
     // =========================================================================
     // Intermediate Logic Variables used for calculation                      //
     // =========================================================================
-    wire read;     // Flag: True if we are doing a read operation
-    wire transfer; // Flag: True if currently transferring data
-    wire forward;  // Flag: True if we need to forward data from write buffer
+    wire load;     // Flag: Should we load data from memory?
+    wire read;     // Flag: Are we doing a read operation?
+    wire transfer; // Flag: Are we currently transferring data?
+    wire forward;  // Flag: Should we forward data from the write buffer??
     wire [DATA_WIDTH-1:0]  template;  // Byte mask template based on HSIZE
     wire [DATA_WIDTH-1:0]  bitmask;   // Byte mask shifted to correct position
     wire [GRANULARITY+2:0] bitshift;  // Shift amount based on HADDR and HSIZE
@@ -80,6 +81,7 @@ module ahb_cache #(
     wire [DATA_WIDTH-1:0] old_data;    // load_data w/ inverted mask applied
     wire [DATA_WIDTH-1:0] new_data;    // hwdata w/ mask applied
     wire [DATA_WIDTH-1:0] write_data;  // Combination of old_data & HWDATA
+    wire [DATA_WIDTH-1:0] zero_vec;    // Shortcut to assign all zero bits
 
     // =========================================================================
     // Propagation Variables to remember data from the previous cycle         //
@@ -96,17 +98,20 @@ module ahb_cache #(
     assign transfer = hsel & htrans[1] & HRESETn;
     // Do we need to forward data from the write buffer?
     assign forward = write & (prev_index == index);
+    // Should we load data from memory?
+    assign load = transfer & ~hresp;
     // Are we reading data?
     assign read = transfer & ~hwrite;
     // Subtract start address to get real_addr address into memory array
-    assign real_addr = haddr - START_ADDR;
+    assign real_addr = transfer ? (haddr - START_ADDR) : zero_vec;;
     // Zero wait state. For 1-cycle latency we never need to insert wait cycles.
     assign hready = 1;
     // Send ERROR(1) if addr out of range when transferring, else send OKAY(0)
     assign hresp = transfer & (real_addr >= SIZE_IN_BITS);
     // Determine bitmask template to use based on # of bytes being transferred
+    assign zero_vec = {DATA_WIDTH{1'b0}};
     // verilator lint_off WIDTH
-    assign template =
+    assign template = (~hsel) ? zero_vec :
         (hsize == 3'b000) ? {   8{1'b1}} :
         (hsize == 3'b001) ? {  16{1'b1}} :
         (hsize == 3'b010) ? {  32{1'b1}} :
@@ -129,7 +134,7 @@ module ahb_cache #(
     // Shift template to correct position to get the bitmask
     assign bitmask  = template << bitshift;
     // Implement data forwarding. Either from buffer or from write in progress
-    assign load_data = (hresp) ? 32'b0 : (forward) ? write_data : MEMORY[index];
+    assign load_data = load ? (forward ? write_data : MEMORY[index]) : zero_vec;
     // Shift data coming in from hwdata
     assign new_data  = hwdata & prev_mask;
     // If address in range: shift mask to correct pos then apply to load data

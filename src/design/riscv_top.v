@@ -20,45 +20,47 @@ module riscv_top(input CLK, RST, output [15:0] LED);
     localparam ROM_FILE="test3.mem";
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
-//    localparam NUM_SLAVES=1;
-//    localparam SLAVE_BASE_ADDR = {32'h0000_0000};
-//    localparam SLAVE_LAST_ADDR = {32'h0000_FFFF};
+    localparam NUM_SLAVES=1;
+    localparam SLAVE_BASE_ADDR = {32'h0000};
+    localparam SLAVE_LAST_ADDR = {32'hFFFF};
 
-//	wire [ADDR_WIDTH-1:0] m_haddr;
-//	wire [DATA_WIDTH-1:0] m_hrdata;
-//	wire [DATA_WIDTH-1:0] m_hwdata;
-//	wire [0:0] m_hmastlock;
-//	wire [0:0] m_hwrite;
-//	wire [1:0] m_htrans;
-//	wire [3:0] m_hprot;
-//	wire [2:0] m_hburst;
-//	wire [2:0] m_hsize;
-//	wire [0:0] m_hresp;
-//	wire [0:0] m_hready;
+	wire [ADDR_WIDTH-1:0] m_haddr;
+	wire [DATA_WIDTH-1:0] m_hrdata;
+	wire [DATA_WIDTH-1:0] m_hwdata;
+	wire [0:0] m_hmastlock;
+	wire [0:0] m_hwrite;
+	wire [1:0] m_htrans;
+	wire [3:0] m_hprot;
+	wire [2:0] m_hburst;
+	wire [2:0] m_hsize;
+	wire [0:0] m_hresp;
+	wire [0:0] m_hready;
 
 	wire [ADDR_WIDTH-1:0] i_haddr;
 	wire [DATA_WIDTH-1:0] i_hrdata;
 	wire [DATA_WIDTH-1:0] i_hwdata;
 	wire [0:0] i_hmastlock;
 	wire [0:0] i_hwrite;
+	wire [2:0] i_hburst;
 	wire [1:0] i_htrans;
 	wire [3:0] i_hprot;
-	wire [2:0] i_hburst;
 	wire [2:0] i_hsize;
 	wire [0:0] i_hresp;
 	wire [0:0] i_hready;
 
-	wire [ADDR_WIDTH-1:0] d_haddr;
-	wire [DATA_WIDTH-1:0] d_hrdata;
-	wire [DATA_WIDTH-1:0] d_hwdata;
-	wire [0:0] d_hmastlock;
-	wire [0:0] d_hwrite;
-	wire [1:0] d_htrans;
-	wire [3:0] d_hprot;
-	wire [2:0] d_hburst;
-	wire [2:0] d_hsize;
-	wire [0:0] d_hresp;
-	wire [0:0] d_hready;
+    localparam N = NUM_SLAVES;
+	wire [N*ADDR_WIDTH-1:0] s_haddr;
+	wire [N*DATA_WIDTH-1:0] s_hrdata;
+	wire [N*DATA_WIDTH-1:0] s_hwdata;
+	wire [N*1-1:0] s_hsel;
+	wire [N*1-1:0] s_hmastlock;
+	wire [N*1-1:0] s_hwrite;
+	wire [N*2-1:0] s_htrans;
+	wire [N*3-1:0] s_hburst;
+	wire [N*4-1:0] s_hprot;
+	wire [N*3-1:0] s_hsize;
+	wire [N*1-1:0] s_hresp;
+	wire [N*1-1:0] s_hready;
 
     genvar x;
 
@@ -72,40 +74,40 @@ module riscv_top(input CLK, RST, output [15:0] LED);
         end
     endgenerate
 	
-//	ahb_bus #(
-//	   .NUM_SLAVES(1),
-//	   .DATA_WIDTH(DATA_WIDTH),
-//	   .ADDR_WIDTH(ADDR_WIDTH),
-//	   .SEL_BYPASS(0)
-//	) ahb_matrix (
-//	   .m_haddr_in   (m_haddr ),
-//	   .m_hwdata_in  (m_hwdata),
-//	   .m_hrdata_out (m_hrdata),
-//	   .m_hsel_in    (1'b0),
-//	   .m_hwrite_in  (m_hwrite),
-//	   .m_htrans_in  (m_htrans),
-//	   .m_hsize_in   (m_hsize ),
-//	   .m_hburst_in  (m_hburst),
-//	   .m_hprot_in   (m_hprot ),
-//	   .m_hready_out (m_hready),
-//	   .m_hresp_out  (m_hresp ),
-//       .m_hmastlock_in (m_hmastlock),
+	ahb_bus #(
+	   .NUM_SLAVES(1),
+	   .DATA_WIDTH(DATA_WIDTH),
+	   .ADDR_WIDTH(ADDR_WIDTH),
+	   .SLAVE_BASE_ADDR(SLAVE_BASE_ADDR),
+	   .SLAVE_LAST_ADDR(SLAVE_LAST_ADDR),
+	   .SEL_BYPASS(0)
+	) ahb_matrix (
+	   .m_haddr_in   (m_haddr ),
+	   .m_hwdata_in  (m_hwdata),
+	   .m_hrdata_out (m_hrdata),
+	   .m_hsel_in    (1'b0    ),
+       .m_hmastlock_in (m_hmastlock),
+	   .m_hwrite_in  (m_hwrite),
+	   .m_htrans_in  (m_htrans),
+	   .m_hsize_in   (m_hsize ),
+	   .m_hburst_in  (m_hburst),
+	   .m_hprot_in   (m_hprot ),
+	   .m_hready_out (m_hready),
+	   .m_hresp_out  (m_hresp ),
        
-//	   .s_haddr_out  (d_haddr ),
-//	   .s_hwdata_out (d_hwdata),
-//	   .s_hrdata_in  (d_hrdata),
-//	   .s_hwrite_out (d_hwrite),
-//	   .s_htrans_out (d_htrans),
-//	   .s_hsize_out  (d_hsize ),
-//	   .s_hburst_out (d_hburst),
-//	   .s_hprot_out  (d_hprot ),
-//	   .s_hresp_in   (d_hresp ),
-//	   .s_hready_in  (d_hready),
-//	   .s_hmastlock_out (d_hmastlock),
-	   
-//       .s_base_addr_in (SLAVE_BASE_ADDR),
-//       .s_last_addr_in (SLAVE_LAST_ADDR)
-//	);
+	   .s_haddr_out  (s_haddr ),
+	   .s_hwdata_out (s_hwdata),
+	   .s_hrdata_in  (s_hrdata),
+	   .s_hsel_out   (s_hsel  ),
+	   .s_hmastlock_out (d_hmastlock),
+	   .s_hwrite_out (s_hwrite),
+	   .s_htrans_out (s_htrans),
+	   .s_hsize_out  (s_hsize ),
+	   .s_hburst_out (s_hburst),
+	   .s_hprot_out  (s_hprot ),
+	   .s_hresp_in   (s_hresp ),
+	   .s_hready_in  (s_hready)
+	);
 
     ahb_cache #(
         .INITIALIZE(1),
@@ -130,18 +132,18 @@ module riscv_top(input CLK, RST, output [15:0] LED);
     ahb_cache dcache(
         .HCLK(CLK),
         .HRESETn(RST),
-        .haddr (d_haddr ),
-        .hrdata(d_hrdata),
-        .hwdata(d_hwdata),
-        .hwrite(d_hwrite),
-        .hsel(1'b1),
+        .haddr (s_haddr ),
+        .hrdata(s_hrdata),
+        .hwdata(s_hwdata),
+        .hwrite(s_hwrite),
+        .hsel  (s_hsel),
         .hmastlock(d_hmastlock),
-        .htrans(d_htrans),
-        .hprot (d_hprot ),
-        .hburst(d_hburst),
-        .hsize (d_hsize ),
-        .hresp (d_hresp ),
-        .hready(d_hready)
+        .htrans(s_htrans),
+        .hprot (s_hprot ),
+        .hburst(s_hburst),
+        .hsize (s_hsize ),
+        .hresp (s_hresp ),
+        .hready(s_hready)
     );
 
     // child instances inside ASIP top:
@@ -159,17 +161,17 @@ module riscv_top(input CLK, RST, output [15:0] LED);
         .if_code_HSIZE (i_hsize ),
         .if_code_HTRANS(i_htrans),
         .if_code_HMASTLOCK(i_hmastlock),
-        .ldst_HADDR (d_haddr ),
-        .ldst_HRDATA(d_hrdata),
-        .ldst_HWDATA(d_hwdata),
-        .ldst_HWRITE(d_hwrite),
-        .ldst_HREADY(d_hready),
-        .ldst_HRESP (d_hresp ),
-        .ldst_HBURST(d_hburst),
-        .ldst_HPROT (d_hprot ),
-        .ldst_HSIZE (d_hsize ),
-        .ldst_HTRANS(d_htrans),
-        .ldst_HMASTLOCK(d_hmastlock)
+        .ldst_HADDR (m_haddr ),
+        .ldst_HRDATA(m_hrdata),
+        .ldst_HWDATA(m_hwdata),
+        .ldst_HWRITE(m_hwrite),
+        .ldst_HREADY(m_hready),
+        .ldst_HRESP (m_hresp ),
+        .ldst_HBURST(m_hburst),
+        .ldst_HPROT (m_hprot ),
+        .ldst_HSIZE (m_hsize ),
+        .ldst_HTRANS(m_htrans),
+        .ldst_HMASTLOCK(m_hmastlock)
     );
 
 endmodule // riscv_top
