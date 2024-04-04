@@ -11,7 +11,7 @@
 //                                                                            //
 // ===========================================================================//
 
-module ahb_cache #(
+module AHB_Cache #(
     parameter DATA_WIDTH = 32,
     parameter ADDR_WIDTH = 32,
     parameter SIZE_IN_KB = 32, // (8192 * 32) / 8 = 32 KB
@@ -46,10 +46,10 @@ module ahb_cache #(
     // =========================================================================
     // Derived Constants                                                      //
     // =========================================================================
-    localparam GRANULARITY  = $clog2(DATA_WIDTH / 8);   // 2^x byte addressable
     localparam ADDRESSABLE  = (1024 * SIZE_IN_KB) / (DATA_WIDTH / 8);
-    localparam ADDR_PREFIX  = ADDR_WIDTH - GRANULARITY; // addr bits for index
+    localparam GRANULARITY  = $clog2(DATA_WIDTH / 8);   // 2^x byte addressable
     localparam INDEX_WIDTH  = $clog2(ADDRESSABLE);      // #bits to index memory
+    localparam INDEX_START  = INDEX_WIDTH + GRANULARITY; // addr bits for index
     localparam SIZE_IN_BITS = DATA_WIDTH * ADDRESSABLE; // Size of address space
 
     // =========================================================================
@@ -69,9 +69,6 @@ module ahb_cache #(
     wire [GRANULARITY+2:0] bitshift;  // Shift amount based on HADDR and HSIZE
     wire [ADDR_WIDTH-1:0]  real_addr; // Effective address starting from zero
     wire [INDEX_WIDTH-1:0] index;     // Used to index into memory buffer
-    // verilator lint_off unused
-    wire [ADDR_PREFIX-1:0] prefix;    // Prefix of address for index 
-    // verilator lint_on unused
 
     // =========================================================================
     // Intermediate Data Variables used for calculation                       //
@@ -92,7 +89,7 @@ module ahb_cache #(
     reg [DATA_WIDTH -1:0] prev_mask;
     
     // =========================================================================
-    // Control signal derivation                                              //
+    // Control signals                                                        //
     // =========================================================================
     // Are we transfering data?
     assign transfer = hsel & htrans[1] & HRESETn;
@@ -102,12 +99,12 @@ module ahb_cache #(
     assign load = transfer & ~hresp;
     // Are we reading data?
     assign read = transfer & ~hwrite;
-    // Subtract start address to get real_addr address into memory array
-    assign real_addr = transfer ? (haddr - START_ADDR) : zero_vec;;
     // Zero wait state. For 1-cycle latency we never need to insert wait cycles.
     assign hready = 1;
     // Send ERROR(1) if addr out of range when transferring, else send OKAY(0)
-    assign hresp = transfer & (real_addr >= SIZE_IN_BITS);
+    assign hresp = real_addr >= SIZE_IN_BITS ? transfer : 0;
+    // Subtract start address to get real_addr address into memory array
+    assign real_addr = transfer ? (haddr - START_ADDR) : zero_vec;;
     // Determine bitmask template to use based on # of bytes being transferred
     assign zero_vec = {DATA_WIDTH{1'b0}};
     // verilator lint_off WIDTH
@@ -126,9 +123,7 @@ module ahb_cache #(
     // Data Derivation                                                        //
     // =========================================================================
     // Cut off unneeded bits from address for loading memory
-    assign prefix = real_addr[ADDR_WIDTH-1:GRANULARITY];
-    // Use prefix as index if within range
-    assign index  = prefix[INDEX_WIDTH-1:0];
+    assign index = real_addr[INDEX_START-1:GRANULARITY];
     // Determine shift amt to place data correctly from least significant bits
     assign bitshift = (|GRANULARITY) ? {real_addr[GRANULARITY-1:0],3'b000} : 0;
     // Shift template to correct position to get the bitmask

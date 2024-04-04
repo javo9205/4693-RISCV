@@ -3,7 +3,7 @@
 // Modified By:    James Vogenthaler - jamesvogen@gmail.com                //
 //                                                                         //
 // Design Name:    AHB Bus Matrix                                          //
-// Module Name:    AHB_BUS                                                 //
+// Module Name:    AHB_Bus                                                 //
 // Project Name:   --                                                      //
 // Language:       Verilog (Originally System Verilog)                     //
 //                                                                         //
@@ -14,7 +14,7 @@
 //                                                                         //
 // ========================================================================//
 
-module ahb_bus #(
+module AHB_Bus #(
     parameter NUM_SLAVES = 8,
     parameter DATA_WIDTH = 32,
     parameter ADDR_WIDTH = 32,

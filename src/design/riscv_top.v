@@ -16,13 +16,20 @@
  *  \brief   Contains module definition of the 'riscv_top' ASIP top.
  */
 
-module riscv_top(input CLK, RST, output [15:0] LED);
+module riscv_top(
+    input CLK, RST,
+    input  [15:0] SW,
+    output [15:0] LED,
+    output [ 5:0] RGB,
+    output [15:0] D_7SEG,
+    output [ 7:0] EN_7SEG
+);
     localparam ROM_FILE="test3.mem";
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
-    localparam NUM_SLAVES=1;
-    localparam SLAVE_BASE_ADDR = {32'h0000};
-    localparam SLAVE_LAST_ADDR = {32'hFFFF};
+    localparam NUM_SLAVES=2;
+    localparam SLAVE_BASE_ADDR = {32'h0000,32'h8000};
+    localparam SLAVE_LAST_ADDR = {32'h7FFF,32'h8100};
 
 	wire [ADDR_WIDTH-1:0] m_haddr;
 	wire [DATA_WIDTH-1:0] m_hrdata;
@@ -65,86 +72,6 @@ module riscv_top(input CLK, RST, output [15:0] LED);
     genvar x;
 
     assign i_hwdata = 32'h0;
-    assign LED[1:0] = 2'b0;
-    assign LED[15:14] = 2'b0;
-    
-    generate
-        for (x=2; x<14; x=x+1) begin
-            assign LED[x] = i_haddr[15-x];
-        end
-    endgenerate
-	
-	ahb_bus #(
-	   .NUM_SLAVES(1),
-	   .DATA_WIDTH(DATA_WIDTH),
-	   .ADDR_WIDTH(ADDR_WIDTH),
-	   .SLAVE_BASE_ADDR(SLAVE_BASE_ADDR),
-	   .SLAVE_LAST_ADDR(SLAVE_LAST_ADDR),
-	   .SEL_BYPASS(0)
-	) ahb_matrix (
-	   .m_haddr_in   (m_haddr ),
-	   .m_hwdata_in  (m_hwdata),
-	   .m_hrdata_out (m_hrdata),
-	   .m_hsel_in    (1'b0    ),
-       .m_hmastlock_in (m_hmastlock),
-	   .m_hwrite_in  (m_hwrite),
-	   .m_htrans_in  (m_htrans),
-	   .m_hsize_in   (m_hsize ),
-	   .m_hburst_in  (m_hburst),
-	   .m_hprot_in   (m_hprot ),
-	   .m_hready_out (m_hready),
-	   .m_hresp_out  (m_hresp ),
-       
-	   .s_haddr_out  (s_haddr ),
-	   .s_hwdata_out (s_hwdata),
-	   .s_hrdata_in  (s_hrdata),
-	   .s_hsel_out   (s_hsel  ),
-	   .s_hmastlock_out (d_hmastlock),
-	   .s_hwrite_out (s_hwrite),
-	   .s_htrans_out (s_htrans),
-	   .s_hsize_out  (s_hsize ),
-	   .s_hburst_out (s_hburst),
-	   .s_hprot_out  (s_hprot ),
-	   .s_hresp_in   (s_hresp ),
-	   .s_hready_in  (s_hready)
-	);
-
-    ahb_cache #(
-        .INITIALIZE(1),
-        .INIT_FILE(ROM_FILE)
-    ) icache(
-        .HCLK(CLK),
-        .HRESETn(RST),
-        .haddr (i_haddr ),
-        .hwdata(i_hwdata),
-        .hrdata(i_hrdata),
-        .hwrite(i_hwrite),
-        .hsel(1'b1),
-        .hmastlock(i_hmastlock),
-        .htrans(i_htrans),
-        .hprot (i_hprot ),
-        .hburst(i_hburst),
-        .hsize (i_hsize ),
-        .hresp (i_hresp ),
-        .hready(i_hready)
-    );
-
-    ahb_cache dcache(
-        .HCLK(CLK),
-        .HRESETn(RST),
-        .haddr (s_haddr ),
-        .hrdata(s_hrdata),
-        .hwdata(s_hwdata),
-        .hwrite(s_hwrite),
-        .hsel  (s_hsel),
-        .hmastlock(d_hmastlock),
-        .htrans(s_htrans),
-        .hprot (s_hprot ),
-        .hburst(s_hburst),
-        .hsize (s_hsize ),
-        .hresp (s_hresp ),
-        .hready(s_hready)
-    );
 
     // child instances inside ASIP top:
     // ASIP instance:
@@ -172,6 +99,100 @@ module riscv_top(input CLK, RST, output [15:0] LED);
         .ldst_HSIZE (m_hsize ),
         .ldst_HTRANS(m_htrans),
         .ldst_HMASTLOCK(m_hmastlock)
+    );
+	
+	AHB_Bus #(
+	   .NUM_SLAVES(1),
+	   .DATA_WIDTH(DATA_WIDTH),
+	   .ADDR_WIDTH(ADDR_WIDTH),
+	   .SLAVE_BASE_ADDR(SLAVE_BASE_ADDR),
+	   .SLAVE_LAST_ADDR(SLAVE_LAST_ADDR),
+	   .SEL_BYPASS(0)
+	) ahb_bus_matrix (
+	   .m_haddr_in   (m_haddr ),
+	   .m_hwdata_in  (m_hwdata),
+	   .m_hrdata_out (m_hrdata),
+	   .m_hsel_in    (1'b0    ),
+       .m_hmastlock_in (m_hmastlock),
+	   .m_hwrite_in  (m_hwrite),
+	   .m_htrans_in  (m_htrans),
+	   .m_hsize_in   (m_hsize ),
+	   .m_hburst_in  (m_hburst),
+	   .m_hprot_in   (m_hprot ),
+	   .m_hready_out (m_hready),
+	   .m_hresp_out  (m_hresp ),
+       
+	   .s_haddr_out  (s_haddr ),
+	   .s_hwdata_out (s_hwdata),
+	   .s_hrdata_in  (s_hrdata),
+	   .s_hsel_out   (s_hsel  ),
+	   .s_hmastlock_out (d_hmastlock),
+	   .s_hwrite_out (s_hwrite),
+	   .s_htrans_out (s_htrans),
+	   .s_hsize_out  (s_hsize ),
+	   .s_hburst_out (s_hburst),
+	   .s_hprot_out  (s_hprot ),
+	   .s_hresp_in   (s_hresp ),
+	   .s_hready_in  (s_hready)
+	);
+
+    AHB_Cache #(
+        .INITIALIZE(1),
+        .INIT_FILE(ROM_FILE)
+    ) icache(
+        .HCLK(CLK),
+        .HRESETn(RST),
+        .haddr (i_haddr ),
+        .hwdata(i_hwdata),
+        .hrdata(i_hrdata),
+        .hwrite(i_hwrite),
+        .hsel(1'b1),
+        .hmastlock(i_hmastlock),
+        .htrans(i_htrans),
+        .hprot (i_hprot ),
+        .hburst(i_hburst),
+        .hsize (i_hsize ),
+        .hresp (i_hresp ),
+        .hready(i_hready)
+    );
+
+    AHB_Cache dcache(
+        .HCLK(CLK),
+        .HRESETn(RST),
+        .haddr (s_haddr [31:0]),
+        .hrdata(s_hrdata[31:0]),
+        .hwdata(s_hwdata[31:0]),
+        .hwrite(s_hwrite[0]),
+        .hsel  (s_hsel  [0]),
+        .hmastlock(s_hmastlock[0]),
+        .htrans(s_htrans[1:0]),
+        .hsize (s_hsize [2:0]),
+        .hburst(s_hburst[2:0]),
+        .hprot (s_hprot [3:0]),
+        .hresp (s_hresp [1]),
+        .hready(s_hready[1])
+    );
+    
+    AHB_GPIO #(
+        .START_ADDR(SLAVE_BASE_ADDR[63:32])
+    ) gpio (
+        .SW (SW),
+        .LED(LED),
+        .RGB(RGB),
+        .D_7SEG (D_7SEG),
+        .EN_7SEG(EN_7SEG),
+        .haddr (s_haddr [1*32+:32]),
+        .hwdata(s_hwdata[1*32+:32]),
+        .hrdata(s_hwdata[1*32+:32]),
+        .hwrite(s_hwrite[1]),
+        .hmastlock(s_hmastlock[i]),
+        .hsel  (s_hsel  [1]),
+        .htrans(s_htrans[1*2+:2]),
+        .hsize (s_hsize [1*3+:3]),
+        .hburst(s_hburst[1*3+:3]),
+        .hprot (s_hburst[1*4+:4]),
+        .hresp (s_hresp [i]),
+        .hready(s_hready[i])
     );
 
 endmodule // riscv_top
