@@ -69,9 +69,9 @@ module riscv_top(
 	wire [0:0] i_hresp;
 	wire [0:0] i_hready;
 
-    genvar x;
-
+//    assign LED = {2'b0, i_haddr[13:2], 2'b0};
     assign i_hwdata = 32'h0;
+    
 
     // child instances inside ASIP top:
     // ASIP instance:
