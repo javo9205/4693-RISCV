@@ -102,6 +102,13 @@ module AHB_GPIO #(
     reg [DATA_WIDTH -1:0] prev_mask;
 
     // =========================================================================
+    // IO MAPPING
+    // =========================================================================
+    localparam SWITCHES = 0; // Index 0 for switches
+    localparam LEDS = 1;     // Index 1 for LEDs
+    localparam _7SEG = 2;    // Index 2 for 7 Segments
+    
+    // =========================================================================
     // Memory Map GPIO Pins
     // =========================================================================
     // Map Switches to the same register
@@ -110,23 +117,24 @@ module AHB_GPIO #(
     integer j;
     generate
         for (i=0; i<16; i=i+1) begin : async_switch
-            Clock_Boundary cb(HCLK, SW[i], SW_Sync[i]);
+            Clock_Boundary switch_cb(HCLK, SW[i], SW_Sync[i]);
         end
     endgenerate
+    // Map Switches to register
     always @(posedge HCLK)
         for (j=0; j<16; j=j+1) begin
-            GPIO[0][j] <= SW_Sync[j];
+            GPIO[SWITCHES][j] <= SW_Sync[j];
         end
-    assign read_only[0] = 1'b1;
+    assign read_only[SWITCHES] = 1'b1;
     // Map LEDs to the same Register
-    assign LED = GPIO[1][15:0];
-    assign RGB = GPIO[1][21:16];
-    assign read_only[1] = 1'b0;
+    assign LED = GPIO[LEDS][15:0];
+    assign RGB = GPIO[LEDS][21:16];
+    assign read_only[LEDS] = 1'b0;
 
     // Map 7 Segment to the same register
-    assign D_7SEG  = GPIO[2][15:0];
-    assign EN_7SEG = GPIO[2][23:16];
-    assign read_only[2] = 1'b0;
+    assign D_7SEG  = GPIO[_7SEG][15:0];
+    assign EN_7SEG = GPIO[_7SEG][23:16];
+    assign read_only[_7SEG] = 1'b0;
     
     // Clear unused bits
     always @(posedge HCLK) begin
@@ -207,6 +215,14 @@ module AHB_GPIO #(
         if (write & ~illegal)
             GPIO[prev_index] <= write_data;
     end
+    
+//    always @( posedge HCLK or negedge HRESETn ) begin
+//        if ( HRESETn == 1'b0 ) begin
+//            Q_reg <= DEFAULT_VALUE;
+//        end else begin
+//            Q_reg <= D;
+//        end
+//    end
 endmodule
     
 
