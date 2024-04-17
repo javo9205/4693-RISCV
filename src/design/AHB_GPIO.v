@@ -31,7 +31,13 @@ module AHB_GPIO #(
     output wire [ 5:0] RGB,
     output wire [15:0] D_7SEG,
     output wire [ 7:0] EN_7SEG,
-
+    inout wire [ 7:0] PmodA,
+    inout wire [ 7:0] PmodB,
+    inout wire [ 5:0] PmodAB,
+    inout wire [ 7:0] PmodC,
+    inout wire [ 7:0] PmodD,
+    inout wire [ 5:0] PmodCD,
+    inout wire [ 3:0] btn,
     // =========================================================================
     // Data and Addr Bus Signals                                              //
     // =========================================================================
@@ -57,7 +63,7 @@ module AHB_GPIO #(
     // =========================================================================
     // Derived Constants                                                      //
     // =========================================================================
-    localparam GPIO_REGS    = 3;
+    localparam GPIO_REGS    = 7;
     localparam GRANULARITY  = $clog2(DATA_WIDTH / 8);   // 2^x byte addressable
     localparam INDEX_WIDTH  = $clog2(GPIO_REGS);        // #bits to index memory
     localparam INDEX_START  = INDEX_WIDTH + GRANULARITY;// Starting bit to index
@@ -108,10 +114,18 @@ module AHB_GPIO #(
     localparam LEDS = 1;     // Index 1 for LEDs
     localparam _7SEG = 2;    // Index 2 for 7 Segments
     
+    //New added !!!!
+    localparam _PMODAB = 3;
+    localparam _PMODCD = 4;
+    localparam _BTN = 5;
+    //tbd
+    
+    
     // =========================================================================
     // Memory Map GPIO Pins
     // =========================================================================
     // Map Switches to the same register
+    wire [3:0] btn_sync;
     wire [15:0] SW_Sync;
     genvar i;
     integer j;
@@ -119,13 +133,21 @@ module AHB_GPIO #(
         for (i=0; i<16; i=i+1) begin : async_switch
             Clock_Boundary switch_cb(HCLK, SW[i], SW_Sync[i]);
         end
+        for (i=0; i<4; i=i+1) begin : async_switch
+            Clock_Boundary switch_cb(HCLK, btn[i], btn_sync[i]); 
+        end
     endgenerate
     // Map Switches to register
-    always @(posedge HCLK)
+    always @(posedge HCLK) begin
         for (j=0; j<16; j=j+1) begin
             GPIO[SWITCHES][j] <= SW_Sync[j];
         end
+        for (j=0; j<4; j=j+1) begin
+            GPIO[_BTN][j] <= btn_sync[j];
+        end
+    end
     assign read_only[SWITCHES] = 1'b1;
+    assign read_only[_BTN] = 1'b1;
     // Map LEDs to the same Register
     assign LED = GPIO[LEDS][15:0];
     assign RGB = GPIO[LEDS][21:16];
@@ -135,6 +157,19 @@ module AHB_GPIO #(
     assign D_7SEG  = GPIO[_7SEG][15:0];
     assign EN_7SEG = GPIO[_7SEG][23:16];
     assign read_only[_7SEG] = 1'b0;
+    assign EN_7SEG = GPIO[_7SEG][23:16];
+    
+    
+    //To James: Newly added GPIO
+    assign PmodA = GPIO[_PMODAB][11:0];
+    assign PmodAB = GPIO[_PMODAB][17:12];
+    assign PmodB = GPIO[_PMODB][29:18];
+    
+    assign PmodC = GPIO[_PMODCD][11:0];
+    assign PmodCD = GPIO[_PMODCD][17:12];
+    assign PmodD = GPIO[_PMODCD][29:18];
+    
+    
     
     // Clear unused bits
     always @(posedge HCLK) begin
@@ -241,3 +276,12 @@ module Clock_Boundary #(SYNC_WIDTH=2) (
         sync_out <= boundary[SYNC_WIDTH-1];
     end
 endmodule
+
+
+//Check logic
+//    always @(posedge CLK) begin
+//        if (btn[0] == 1) for 3 cycles, forgot how to check XD
+//            all async is reset
+//        else
+//            nothing happens
+//    end

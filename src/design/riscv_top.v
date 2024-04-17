@@ -16,8 +16,9 @@
  *  \brief   Contains module definition of the 'riscv_top' ASIP top.
  */
 
+
 module riscv_top(
-    input CLK, RST,
+    input CLK,
     input  [15:0] SW,
     output [15:0] LED,
     output [ 5:0] RGB,
@@ -68,6 +69,8 @@ module riscv_top(
 	wire [2:0] i_hsize;
 	wire [0:0] i_hresp;
 	wire [0:0] i_hready;
+	wire RST;
+	assign RST = ~btn[0];
 
 //    assign LED = {2'b0, i_haddr[13:2], 2'b0};
     assign i_hwdata = 32'h0;

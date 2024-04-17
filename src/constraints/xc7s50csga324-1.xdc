@@ -42,14 +42,11 @@ set_property -dict {PACKAGE_PIN A3 IOSTANDARD LVCMOS33} [get_ports {LED[13]}];
 set_property -dict {PACKAGE_PIN B4 IOSTANDARD LVCMOS33} [get_ports {LED[14]}];
 set_property -dict {PACKAGE_PIN A4 IOSTANDARD LVCMOS33} [get_ports {LED[15]}];
 
-
-set_property -dict {PACKAGE_PIN B15 IOSTANDARD LVCMOS33} [get_ports {PmodB[0]}];
-
 ## On-board Buttons
-set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports {RST}];
-#set_property -dict {PACKAGE_PIN J5 IOSTANDARD LVCMOS33} [get_ports {MEMDUMP}];
-#set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports {btn[2]}]
-#set_property -dict {PACKAGE_PIN J1 IOSTANDARD LVCMOS33} [get_ports {btn[3]}]
+set_property -dict {PACKAGE_PIN J2 IOSTANDARD LVCMOS33} [get_ports {btn[0]}];
+set_property -dict {PACKAGE_PIN J5 IOSTANDARD LVCMOS33} [get_ports {btn[1]}];
+set_property -dict {PACKAGE_PIN H2 IOSTANDARD LVCMOS33} [get_ports {btn[2]}]
+set_property -dict {PACKAGE_PIN J1 IOSTANDARD LVCMOS33} [get_ports {btn[3]}]
 ##set_property -dict {CLOCK_DEDICATED_ROUTE FALSE} [get_nets {btn[0]}]
 
 ## On-board color LEDs
@@ -88,9 +85,67 @@ set_property -dict {PACKAGE_PIN H4 IOSTANDARD LVCMOS33} [get_ports {D_7SEG[13]}]
 set_property -dict {PACKAGE_PIN D1 IOSTANDARD LVCMOS33} [get_ports {D_7SEG[14]}];
 set_property -dict {PACKAGE_PIN C1 IOSTANDARD LVCMOS33} [get_ports {D_7SEG[15]}];
 
+
+## Expansion Connectors
+## PmodA
+set_property -dict {PACKAGE_PIN B13 IOSTANDARD LVCMOS33} [get_ports {PmodA[0]}];
+set_property -dict {PACKAGE_PIN A13 IOSTANDARD LVCMOS33} [get_ports {PmodA[1]}];
+set_property -dict {PACKAGE_PIN B14 IOSTANDARD LVCMOS33} [get_ports {PmodA[2]}];
+set_property -dict {PACKAGE_PIN A14 IOSTANDARD LVCMOS33} [get_ports {PmodA[3]}];
+set_property -dict {PACKAGE_PIN E12 IOSTANDARD LVCMOS33} [get_ports {PmodA[4]}];
+set_property -dict {PACKAGE_PIN D12 IOSTANDARD LVCMOS33} [get_ports {PmodA[5]}];
+set_property -dict {PACKAGE_PIN C13 IOSTANDARD LVCMOS33} [get_ports {PmodA[6]}];
+set_property -dict {PACKAGE_PIN C14 IOSTANDARD LVCMOS33} [get_ports {PmodA[7]}];
+
+##PmodB
+set_property -dict {PACKAGE_PIN B15 IOSTANDARD LVCMOS33} [get_ports {PmodB[0]}];
+set_property -dict {PACKAGE_PIN A15 IOSTANDARD LVCMOS33} [get_ports {PmodB[1]}];
+set_property -dict {PACKAGE_PIN B16 IOSTANDARD LVCMOS33} [get_ports {PmodB[2]}];
+set_property -dict {PACKAGE_PIN A16 IOSTANDARD LVCMOS33} [get_ports {PmodB[3]}];
+set_property -dict {PACKAGE_PIN B17 IOSTANDARD LVCMOS33} [get_ports {PmodB[4]}];
+set_property -dict {PACKAGE_PIN A17 IOSTANDARD LVCMOS33} [get_ports {PmodB[5]}];
+set_property -dict {PACKAGE_PIN C17 IOSTANDARD LVCMOS33} [get_ports {PmodB[6]}];
+set_property -dict {PACKAGE_PIN B18 IOSTANDARD LVCMOS33} [get_ports {PmodB[7]}];
+
+##PmodAB
+set_property -dict {PACKAGE_PIN C18 IOSTANDARD LVCMOS33} [get_ports {PmodAB[0]}];
+set_property -dict {PACKAGE_PIN E18 IOSTANDARD LVCMOS33} [get_ports {PmodAB[1]}];
+set_property -dict {PACKAGE_PIN G18 IOSTANDARD LVCMOS33} [get_ports {PmodAB[2]}];
+set_property -dict {PACKAGE_PIN H18 IOSTANDARD LVCMOS33} [get_ports {PmodAB[3]}];
+set_property -dict {PACKAGE_PIN F18 IOSTANDARD LVCMOS33} [get_ports {PmodAB[4]}];
+set_property -dict {PACKAGE_PIN D18 IOSTANDARD LVCMOS33} [get_ports {PmodAB[5]}];
+
+## Expansion Connectors
+## PmodC
+set_property -dict {PACKAGE_PIN T6 IOSTANDARD LVCMOS33} [get_ports {PmodC[0]}];
+set_property -dict {PACKAGE_PIN T5 IOSTANDARD LVCMOS33} [get_ports {PmodC[1]}];
+set_property -dict {PACKAGE_PIN R5 IOSTANDARD LVCMOS33} [get_ports {PmodC[2]}];
+set_property -dict {PACKAGE_PIN T4 IOSTANDARD LVCMOS33} [get_ports {PmodC[3]}];
+set_property -dict {PACKAGE_PIN R7 IOSTANDARD LVCMOS33} [get_ports {PmodC[4]}];
+set_property -dict {PACKAGE_PIN R6 IOSTANDARD LVCMOS33} [get_ports {PmodC[5]}];
+set_property -dict {PACKAGE_PIN P6 IOSTANDARD LVCMOS33} [get_ports {PmodC[6]}];
+set_property -dict {PACKAGE_PIN P5 IOSTANDARD LVCMOS33} [get_ports {PmodC[7]}];
+
+##PmodD
+set_property -dict {PACKAGE_PIN R5 IOSTANDARD LVCMOS33} [get_ports {PmodD[0]}];
+set_property -dict {PACKAGE_PIN T3 IOSTANDARD LVCMOS33} [get_ports {PmodD[1]}];
+set_property -dict {PACKAGE_PIN N5 IOSTANDARD LVCMOS33} [get_ports {PmodD[2]}];
+set_property -dict {PACKAGE_PIN N4 IOSTANDARD LVCMOS33} [get_ports {PmodD[3]}];
+set_property -dict {PACKAGE_PIN L5 IOSTANDARD LVCMOS33} [get_ports {PmodD[4]}];
+set_property -dict {PACKAGE_PIN M4 IOSTANDARD LVCMOS33} [get_ports {PmodD[5]}];
+set_property -dict {PACKAGE_PIN K4 IOSTANDARD LVCMOS33} [get_ports {PmodD[6]}];
+set_property -dict {PACKAGE_PIN L4 IOSTANDARD LVCMOS33} [get_ports {PmodD[7]}];
+
+##PmodCD
+set_property -dict {PACKAGE_PIN K6 IOSTANDARD LVCMOS33} [get_ports {PmodAB[0]}];
+set_property -dict {PACKAGE_PIN L6 IOSTANDARD LVCMOS33} [get_ports {PmodAB[1]}];
+set_property -dict {PACKAGE_PIN M5 IOSTANDARD LVCMOS33} [get_ports {PmodAB[2]}];
+set_property -dict {PACKAGE_PIN M3 IOSTANDARD LVCMOS33} [get_ports {PmodAB[3]}];
+set_property -dict {PACKAGE_PIN K3 IOSTANDARD LVCMOS33} [get_ports {PmodAB[4]}];
+set_property -dict {PACKAGE_PIN J6 IOSTANDARD LVCMOS33} [get_ports {PmodAB[5]}];
 ## UART
-#set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {UART_rxd}]
-#set_property -dict {PACKAGE_PIN U11 IOSTANDARD LVCMOS33} [get_ports {UART_txd}]
+set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports {UART_rxd}]
+set_property -dict {PACKAGE_PIN U11 IOSTANDARD LVCMOS33} [get_ports {UART_txd}]
 
 ##HDMI Signals
 #set_property -dict { PACKAGE_PIN T14   IOSTANDARD TMDS_33 } [get_ports {hdmi_clk_n}]
@@ -105,8 +160,13 @@ set_property -dict {PACKAGE_PIN C1 IOSTANDARD LVCMOS33} [get_ports {D_7SEG[15]}]
 #set_property -dict { PACKAGE_PIN N15   IOSTANDARD TMDS_33  } [get_ports {hdmi_tx_p[2]}]
 
 ## PWM audio signals
-#set_property -dict {PACKAGE_PIN N13 IOSTANDARD LVCMOS33} [get_ports {left_audio_out}]
-#set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {right_audio_out}]
+set_property -dict {PACKAGE_PIN N13 IOSTANDARD LVCMOS33} [get_ports {left_audio_out}]
+set_property -dict {PACKAGE_PIN N14 IOSTANDARD LVCMOS33} [get_ports {right_audio_out}]
+
+##
+# J10 and K9 potentialometer
+
+
 
 ## BLE UART signals
 #set_property -dict {PACKAGE_PIN G5 IOSTANDARD LVCMOS33} [get_ports {ble_uart_tx}]
