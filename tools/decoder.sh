@@ -195,7 +195,7 @@ if [[ -z "$1" ]]; then
     if [[ $j -gt 0 ]]; then
         while read -r line; do if [[ $n -lt $j ]]; then n=$((n+1)); else break; fi; done
     fi
-    table "  PC  : " " Instruction" "Assembly" "T" "Opcode" "FN3" "  FN7  " "RAW" "Description"
+    table "  PC  : " "Instr   " "Assembly" "T" "Opcode" "FN3" "  FN7  " "RAW" "Description"
     echo -------------------------------------------------------------------------------------------------------
     while read -r line; do
         decode $line "$(printf '0x%04x: ' $i)"
@@ -207,7 +207,7 @@ if [[ -z "$1" ]]; then
 elif [[ -f "$1" ]]; then
     j=$(pc_to_line_num)
     i=$((j*4))
-    table "  PC  : " " Instruction" "Assembly" "T" "Opcode" "FN3" "  FN7  " "RAW" "Description"
+    table "  PC  : " "Instr   " "Assembly" "T" "Opcode" "FN3" "  FN7  " "RAW" "Description"
     echo -------------------------------------------------------------------------------------------------------
     for line in $(tail -n +$((j+1)) $1); do
         decode $line "$(printf '0x%04x: ' $i)"

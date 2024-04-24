@@ -24,10 +24,9 @@ module riscv_tb;
 
     reg CLK;
     reg RST;
-    wire [15:0] ADDR;
     integer i;
     
-    riscv_top top (CLK, RST, ADDR);
+    riscv_top top (CLK, RST);
     
     always #1 CLK = ~CLK;
     

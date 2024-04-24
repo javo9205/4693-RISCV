@@ -5,518 +5,2666 @@
    <db_ref_list>
       <db_ref path="riscv_tb_behav.wdb" id="1">
          <top_modules>
+            <top_module name="\$unit_AHB_Bus_sv_3083925535 " />
             <top_module name="glbl" />
             <top_module name="riscv_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="464.150 ns"></ZoomStartTime>
-      <ZoomEndTime time="484.059 ns"></ZoomEndTime>
-      <Cursor1Time time="47.789 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="84.051 ns"></ZoomEndTime>
+      <Cursor1Time time="9.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="187"></NameColumnWidth>
+      <NameColumnWidth column_width="135"></NameColumnWidth>
       <ValueColumnWidth column_width="60"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="12" />
-   <wvobject type="logic" fp_name="/riscv_tb/CLK">
-      <obj_property name="ElementShortName">CLK</obj_property>
-      <obj_property name="ObjectShortName">CLK</obj_property>
-      <obj_property name="CustomSignalColor">#FF0080</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
+   <WVObjectSize size="21" />
+   <wave_markers>
+      <marker label="" time="355000" />
+      <marker label="" time="387000" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/riscv_tb/RST">
       <obj_property name="ElementShortName">RST</obj_property>
       <obj_property name="ObjectShortName">RST</obj_property>
       <obj_property name="CustomSignalColor">#FF0080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="vbus" fp_name="vbus155">
-      <obj_property name="label">PC Counter</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[15]">
-         <obj_property name="ElementShortName">[15]</obj_property>
-         <obj_property name="ObjectShortName">[15]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[14]">
-         <obj_property name="ElementShortName">[14]</obj_property>
-         <obj_property name="ObjectShortName">[14]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[13]">
-         <obj_property name="ElementShortName">[13]</obj_property>
-         <obj_property name="ObjectShortName">[13]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[12]">
-         <obj_property name="ElementShortName">[12]</obj_property>
-         <obj_property name="ObjectShortName">[12]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[11]">
-         <obj_property name="ElementShortName">[11]</obj_property>
-         <obj_property name="ObjectShortName">[11]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[10]">
-         <obj_property name="ElementShortName">[10]</obj_property>
-         <obj_property name="ObjectShortName">[10]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[9]">
-         <obj_property name="ElementShortName">[9]</obj_property>
-         <obj_property name="ObjectShortName">[9]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[8]">
-         <obj_property name="ElementShortName">[8]</obj_property>
-         <obj_property name="ObjectShortName">[8]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[7]">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[6]">
-         <obj_property name="ElementShortName">[6]</obj_property>
-         <obj_property name="ObjectShortName">[6]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[5]">
-         <obj_property name="ElementShortName">[5]</obj_property>
-         <obj_property name="ObjectShortName">[5]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[4]">
-         <obj_property name="ElementShortName">[4]</obj_property>
-         <obj_property name="ObjectShortName">[4]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[3]">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[2]">
-         <obj_property name="ElementShortName">[2]</obj_property>
-         <obj_property name="ObjectShortName">[2]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[1]">
-         <obj_property name="ElementShortName">[1]</obj_property>
-         <obj_property name="ObjectShortName">[1]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/i_haddr[0]">
-         <obj_property name="ElementShortName">[0]</obj_property>
-         <obj_property name="ObjectShortName">[0]</obj_property>
-      </wvobject>
+   <wvobject type="logic" fp_name="/riscv_tb/CLK">
+      <obj_property name="ElementShortName">CLK</obj_property>
+      <obj_property name="ObjectShortName">CLK</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_instr">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">s_id_instr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">s_id_instr[31:0]</obj_property>
-      <obj_property name="label">Instruction</obj_property>
-   </wvobject>
-   <wvobject type="group" fp_name="group144">
-      <obj_property name="label">Instruction Decoding</obj_property>
+   <wvobject type="group" fp_name="group576">
+      <obj_property name="label">Pipeline Order</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="vbus" fp_name="vbus221">
-         <obj_property name="label">opcode</obj_property>
+      <wvobject type="vbus" fp_name="vbus569">
+         <obj_property name="label">IF</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="CustomSignalColor">#FFD700</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[6]">
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_order1/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">IF1</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_order2/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">IF2</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus570">
+         <obj_property name="label">ID</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id1_order">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">s_id1_order</obj_property>
+            <obj_property name="ObjectShortName">s_id1_order</obj_property>
+            <obj_property name="label">ID1</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id2_order">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">s_id2_order</obj_property>
+            <obj_property name="ObjectShortName">s_id2_order</obj_property>
+            <obj_property name="label">ID2</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus572">
+         <obj_property name="label">EX</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_order/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">EX1</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_order/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">EX2</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus574">
+         <obj_property name="label">ME</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me1_order/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">ME1</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me2_order/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">ME2</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus575">
+         <obj_property name="label">WB</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_wb1_order/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">WB1</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_wb2_order/Q">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">Q[0:0]</obj_property>
+            <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+            <obj_property name="label">WB2</obj_property>
+            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group408">
+      <obj_property name="label">Pipeline A</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="vbus" fp_name="vbus191">
+         <obj_property name="label">IF1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[6]">
             <obj_property name="ElementShortName">[6]</obj_property>
             <obj_property name="ObjectShortName">[6]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[5]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[5]">
             <obj_property name="ElementShortName">[5]</obj_property>
             <obj_property name="ObjectShortName">[5]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[4]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[4]">
             <obj_property name="ElementShortName">[4]</obj_property>
             <obj_property name="ObjectShortName">[4]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[3]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[3]">
             <obj_property name="ElementShortName">[3]</obj_property>
             <obj_property name="ObjectShortName">[3]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[2]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[2]">
             <obj_property name="ElementShortName">[2]</obj_property>
             <obj_property name="ObjectShortName">[2]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[1]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[1]">
             <obj_property name="ElementShortName">[1]</obj_property>
             <obj_property name="ObjectShortName">[1]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[0]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[0]">
             <obj_property name="ElementShortName">[0]</obj_property>
             <obj_property name="ObjectShortName">[0]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus235">
-         <obj_property name="label">func3</obj_property>
+      <wvobject type="vbus" fp_name="vbus240">
+         <obj_property name="label">ID1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[14]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[14]">
             <obj_property name="ElementShortName">[14]</obj_property>
             <obj_property name="ObjectShortName">[14]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[13]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[13]">
             <obj_property name="ElementShortName">[13]</obj_property>
             <obj_property name="ObjectShortName">[13]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[12]">
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[12]">
             <obj_property name="ElementShortName">[12]</obj_property>
             <obj_property name="ObjectShortName">[12]</obj_property>
          </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id1_stage/r_id1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus251">
-         <obj_property name="label">func7</obj_property>
+      <wvobject type="vbus" fp_name="vbus289">
+         <obj_property name="label">EX1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="CustomSignalColor">#FFD700</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">BINARYRADIX</obj_property>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[31]">
-            <obj_property name="ElementShortName">[31]</obj_property>
-            <obj_property name="ObjectShortName">[31]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[30]">
-            <obj_property name="ElementShortName">[30]</obj_property>
-            <obj_property name="ObjectShortName">[30]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[29]">
-            <obj_property name="ElementShortName">[29]</obj_property>
-            <obj_property name="ObjectShortName">[29]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[28]">
-            <obj_property name="ElementShortName">[28]</obj_property>
-            <obj_property name="ObjectShortName">[28]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[27]">
-            <obj_property name="ElementShortName">[27]</obj_property>
-            <obj_property name="ObjectShortName">[27]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[26]">
-            <obj_property name="ElementShortName">[26]</obj_property>
-            <obj_property name="ObjectShortName">[26]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/id/s_id_instr_Q[25]">
-            <obj_property name="ElementShortName">[25]</obj_property>
-            <obj_property name="ObjectShortName">[25]</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_rd">
+      <wvobject type="vbus" fp_name="vbus391">
+         <obj_property name="label">ME1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_rd[4:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_rd[4:0]</obj_property>
-         <obj_property name="label">rd</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_output/r_me1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_rs1">
+      <wvobject type="vbus" fp_name="vbus342">
+         <obj_property name="label">WB1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_rs1[4:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_rs1[4:0]</obj_property>
-         <obj_property name="label">rs1</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_rs2">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_rs2[4:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_rs2[4:0]</obj_property>
-         <obj_property name="label">rs2</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_immed">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_immed[31:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_immed[31:0]</obj_property>
-         <obj_property name="label">immed</obj_property>
-         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb1_stage/r_wb1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="vbus" fp_name="vbus1259">
-      <obj_property name="label">Control Signals</obj_property>
+   <wvobject type="group" fp_name="group654">
+      <obj_property name="label">Pipeline B</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="vbus" fp_name="vbus441">
+         <obj_property name="label">IF2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus490">
+         <obj_property name="label">ID2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id2_stage/r_id2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus539">
+         <obj_property name="label">EX2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus588">
+         <obj_property name="label">ME2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_output/r_me2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus637">
+         <obj_property name="label">WB2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb2_stage/r_wb2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus434">
+      <obj_property name="label">Age difference</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#008080</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_id_regwrite">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_regwrite</obj_property>
-         <obj_property name="ObjectShortName">s_id_regwrite</obj_property>
-         <obj_property name="label">reg_write</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id2_older">
+         <obj_property name="ElementShortName">s_id2_older</obj_property>
+         <obj_property name="ObjectShortName">s_id2_older</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_aluop">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_aluop[3:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_aluop[3:0]</obj_property>
-         <obj_property name="label">aluop</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex2_older">
+         <obj_property name="ElementShortName">s_ex2_older</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_older</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_memop">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_memop[3:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_memop[3:0]</obj_property>
-         <obj_property name="label">memop</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_me2_older">
+         <obj_property name="ElementShortName">s_me2_older</obj_property>
+         <obj_property name="ObjectShortName">s_me2_older</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/s_id_branchop">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">s_id_branchop[2:0]</obj_property>
-         <obj_property name="ObjectShortName">s_id_branchop[2:0]</obj_property>
-         <obj_property name="label">branchop</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_wb2_older">
+         <obj_property name="ElementShortName">s_wb2_older</obj_property>
+         <obj_property name="ObjectShortName">s_wb2_older</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="vbus" fp_name="vbus3552">
-         <obj_property name="label">PC Source Control Signals</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_id_stall">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">s_id_stall</obj_property>
-            <obj_property name="ObjectShortName">s_id_stall</obj_property>
-            <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-            <obj_property name="label">s_id_stall ( s* hazard )</obj_property>
-         </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_me_pcsrc">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">s_me_pcsrc</obj_property>
-            <obj_property name="ObjectShortName">s_me_pcsrc</obj_property>
-            <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-            <obj_property name="label">s_me_pcsrc ( blt / bge )</obj_property>
-         </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_ex_pcsrc">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">s_ex_pcsrc</obj_property>
-            <obj_property name="ObjectShortName">s_ex_pcsrc</obj_property>
-            <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-            <obj_property name="label">s_ex_pcsrc ( jalr / bne / beq )</obj_property>
-         </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_id_pcsrc">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">s_id_pcsrc</obj_property>
-            <obj_property name="ObjectShortName">s_id_pcsrc</obj_property>
-            <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-            <obj_property name="label">s_id_pcsrc ( jal )</obj_property>
-         </wvobject>
-      </wvobject>
-      <wvobject type="vbus" fp_name="vbus3562">
-         <obj_property name="label">Pipeline Flush Control Signals</obj_property>
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_id_clear">
-            <obj_property name="ElementShortName">s_id_clear</obj_property>
-            <obj_property name="ObjectShortName">s_id_clear</obj_property>
-            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-         </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_ex_clear">
-            <obj_property name="ElementShortName">s_ex_clear</obj_property>
-            <obj_property name="ObjectShortName">s_ex_clear</obj_property>
-            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-         </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_me_clear">
-            <obj_property name="ElementShortName">s_me_clear</obj_property>
-            <obj_property name="ObjectShortName">s_me_clear</obj_property>
-            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-         </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/riscv/core/s_wb_clear">
-            <obj_property name="ElementShortName">s_wb_clear</obj_property>
-            <obj_property name="ObjectShortName">s_wb_clear</obj_property>
-            <obj_property name="CustomSignalColor">#00FF7F</obj_property>
-            <obj_property name="UseCustomSignalColor">true</obj_property>
-         </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/riscv_tb/top/dcache/hwdata">
+   <wvobject type="vbus" fp_name="vbus73">
+      <obj_property name="label">Hazards</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">hwdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">hwdata[31:0]</obj_property>
-      <obj_property name="label">Cache Write Data</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me1_memory/s_me1_memhaz_D">
+         <obj_property name="ElementShortName">s_me1_memhaz_D</obj_property>
+         <obj_property name="ObjectShortName">s_me1_memhaz_D</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me2_memory/s_me2_memhaz_D">
+         <obj_property name="ElementShortName">s_me2_memhaz_D</obj_property>
+         <obj_property name="ObjectShortName">s_me2_memhaz_D</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb_coordination/s_wb_wthaz_D">
+         <obj_property name="ElementShortName">s_wb_wthaz_D</obj_property>
+         <obj_property name="ObjectShortName">s_wb_wthaz_D</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/riscv_tb/top/dcache/hrdata">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">hrdata[31:0]</obj_property>
-      <obj_property name="ObjectShortName">hrdata[31:0]</obj_property>
-      <obj_property name="label">Cache Read Data</obj_property>
-      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/riscv_tb/top/riscv/core/rf_xpr/RAM">
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="ElementShortName">RAM[0:31][31:0]</obj_property>
-      <obj_property name="ObjectShortName">RAM[0:31][31:0]</obj_property>
+   <wvobject type="vbus" fp_name="vbus506">
       <obj_property name="label">Register File</obj_property>
-      <obj_property name="CustomSignalColor">#808080</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[0]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][31:0]</obj_property>
+         <obj_property name="label">x0</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[1]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+         <obj_property name="label">x1</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="label">x2</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="label">x3</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[4]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[4][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][31:0]</obj_property>
+         <obj_property name="label">x4</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[5]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[5][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][31:0]</obj_property>
+         <obj_property name="label">x5</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[6]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[6][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+         <obj_property name="label">x6</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[7]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[7][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+         <obj_property name="label">x7</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[8]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[8][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[8][31:0]</obj_property>
+         <obj_property name="label">x8</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[9]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[9][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[9][31:0]</obj_property>
+         <obj_property name="label">x9</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[10]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[10][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+         <obj_property name="label">x10</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[11]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[11][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+         <obj_property name="label">x11</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[12]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[12][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+         <obj_property name="label">x12</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[13]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[13][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][31:0]</obj_property>
+         <obj_property name="label">x13</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[14]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[14][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[14][31:0]</obj_property>
+         <obj_property name="label">x14</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[15]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[15][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[15][31:0]</obj_property>
+         <obj_property name="label">x15</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[16]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[16][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[16][31:0]</obj_property>
+         <obj_property name="label">x16</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[17]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[17][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[17][31:0]</obj_property>
+         <obj_property name="label">x17</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[18]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[18][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[18][31:0]</obj_property>
+         <obj_property name="label">x18</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[19]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[19][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[19][31:0]</obj_property>
+         <obj_property name="label">x19</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[20]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[20][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[20][31:0]</obj_property>
+         <obj_property name="label">x20</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[21]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[21][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[21][31:0]</obj_property>
+         <obj_property name="label">x21</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[22]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[22][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[22][31:0]</obj_property>
+         <obj_property name="label">x22</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[23]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[23][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[23][31:0]</obj_property>
+         <obj_property name="label">x23</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[24]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[24][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[24][31:0]</obj_property>
+         <obj_property name="label">x24</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[25]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[25][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[25][31:0]</obj_property>
+         <obj_property name="label">x25</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[26]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[26][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[26][31:0]</obj_property>
+         <obj_property name="label">x26</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[27]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[27][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[27][31:0]</obj_property>
+         <obj_property name="label">x27</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[28]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[28][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[28][31:0]</obj_property>
+         <obj_property name="label">x28</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[29]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[29][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[29][31:0]</obj_property>
+         <obj_property name="label">x29</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[30]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[30][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[30][31:0]</obj_property>
+         <obj_property name="label">x30</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[31]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[31][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[31][31:0]</obj_property>
+         <obj_property name="label">x31</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group218">
-      <obj_property name="label">Cache</obj_property>
+   <wvobject type="group" fp_name="group516">
+      <obj_property name="label">IF Stage</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hsize">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">hsize[2:0]</obj_property>
-         <obj_property name="ObjectShortName">hsize[2:0]</obj_property>
-         <obj_property name="label">Cache Transfer Size</obj_property>
-         <obj_property name="CustomSignalColor">#FFA500</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id_coordination/s_id1_order_Q">
+         <obj_property name="ElementShortName">s_id1_order_Q</obj_property>
+         <obj_property name="ObjectShortName">s_id1_order_Q</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/htrans">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">htrans[1:0]</obj_property>
-         <obj_property name="ObjectShortName">htrans[1:0]</obj_property>
-         <obj_property name="label">Cache Transfer State</obj_property>
-         <obj_property name="CustomSignalColor">#FFA500</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id_coordination/s_id2_order_Q">
+         <obj_property name="ElementShortName">s_id2_order_Q</obj_property>
+         <obj_property name="ObjectShortName">s_id2_order_Q</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/haddr">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">haddr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">haddr[31:0]</obj_property>
-         <obj_property name="label">Cache Address</obj_property>
-         <obj_property name="CustomSignalColor">#FFA500</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hwdata">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">hwdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">hwdata[31:0]</obj_property>
-         <obj_property name="label">Cache Write Data</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id2_older">
+         <obj_property name="ElementShortName">s_id2_older</obj_property>
+         <obj_property name="ObjectShortName">s_id2_older</obj_property>
          <obj_property name="CustomSignalColor">#FFFF00</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hrdata">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">hrdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">hrdata[31:0]</obj_property>
-         <obj_property name="label">Cache Read Data</obj_property>
-         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id1_stall">
+         <obj_property name="ElementShortName">s_id1_stall</obj_property>
+         <obj_property name="ObjectShortName">s_id1_stall</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/dcache/transfer">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">transfer</obj_property>
-         <obj_property name="ObjectShortName">transfer</obj_property>
-         <obj_property name="label">Cache Active?</obj_property>
-         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id2_stall">
+         <obj_property name="ElementShortName">s_id2_stall</obj_property>
+         <obj_property name="ObjectShortName">s_id2_stall</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/dcache/hwrite">
+      <wvobject type="vbus" fp_name="vbus5914">
+         <obj_property name="label">PC1</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">hwrite</obj_property>
-         <obj_property name="ObjectShortName">hwrite</obj_property>
-         <obj_property name="label">Cache Op? (Write=1 or Read=0)</obj_property>
-         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc1_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
       </wvobject>
-      <wvobject type="logic" fp_name="/riscv_tb/top/dcache/hresp">
+      <wvobject type="vbus" fp_name="vbus5963">
+         <obj_property name="label">PC2</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">hresp</obj_property>
-         <obj_property name="ObjectShortName">hresp</obj_property>
-         <obj_property name="label">Cache Error?</obj_property>
-         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="CustomSignalColor">#D2691E</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/index">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">index[12:0]</obj_property>
-         <obj_property name="ObjectShortName">index[12:0]</obj_property>
-         <obj_property name="label">INDEX</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/load_data">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">load_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">load_data[31:0]</obj_property>
-         <obj_property name="label">MEMORY[INDEX]</obj_property>
-         <obj_property name="CustomSignalColor">#A52A2A</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/if_stage/s_if_pc2_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group2863">
-      <obj_property name="label">dcache handler</obj_property>
+   <wvobject type="group" fp_name="group95">
+      <obj_property name="label">EX Stage</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/bitmask">
-         <obj_property name="ElementShortName">bitmask[31:0]</obj_property>
-         <obj_property name="ObjectShortName">bitmask[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="vbus" fp_name="vbus5508">
+         <obj_property name="label">EX1 PC</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_aluop/\ALUOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="label">EX1 ALUOP</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_memop/\MEM_OP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="label">EX1 ME OP</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_branchop/\BRANCHOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[2:0]</obj_property>
+         <obj_property name="label">EX1 BRANCH OP</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_rd/\XPR.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">EX1 RD</obj_property>
          <obj_property name="CustomSignalColor">#008080</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/bitshift">
-         <obj_property name="ElementShortName">bitshift[4:0]</obj_property>
-         <obj_property name="ObjectShortName">bitshift[4:0]</obj_property>
-         <obj_property name="CustomSignalColor">#008080</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/load_data">
-         <obj_property name="ElementShortName">load_data[31:0]</obj_property>
-         <obj_property name="ObjectShortName">load_data[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#008080</obj_property>
-         <obj_property name="UseCustomSignalColor">true</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/haddr">
-         <obj_property name="ElementShortName">haddr[31:0]</obj_property>
-         <obj_property name="ObjectShortName">haddr[31:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hwdata">
-         <obj_property name="ElementShortName">hwdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">hwdata[31:0]</obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_rs1/\XPR.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">EX1 RS1</obj_property>
          <obj_property name="CustomSignalColor">#008000</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/riscv_tb/top/dcache/hrdata">
-         <obj_property name="ElementShortName">hrdata[31:0]</obj_property>
-         <obj_property name="ObjectShortName">hrdata[31:0]</obj_property>
-         <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_rs2/\XPR.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">EX1 RS2</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus2882">
-         <obj_property name="label">dcache control signals</obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/s_ex1_src1_Q">
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <obj_property name="ElementShortName">s_ex1_src1_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_src1_Q[31:0]</obj_property>
+         <obj_property name="label">EX1 ALU SRC 1</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
          <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/s_ex1_src2_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex1_src2_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_src2_Q[31:0]</obj_property>
+         <obj_property name="label">EX1 ALU SRC 2</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/s_ex1_alu_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex1_alu_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_alu_Q[31:0]</obj_property>
+         <obj_property name="label">EX1 ALU Result</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus5459">
+         <obj_property name="label">EX2 PC</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_aluop/\ALUOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="label">EX2 ALUOP</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_memop/\MEM_OP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="label">EX2 MEMOP</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_branchop/\BRANCHOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[2:0]</obj_property>
+         <obj_property name="label">EX2 BRANCH OP</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_rd/\XPR.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">EX2 RD</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_rs1/\XPR.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">EX2 RS1</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_rs2/\XPR.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[4:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[4:0]</obj_property>
+         <obj_property name="label">EX2 RS2</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/s_ex2_src1_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_src1_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_src1_Q[31:0]</obj_property>
+         <obj_property name="label">EX2 ALU SRC 1</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/s_ex2_src2_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_src2_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_src2_Q[31:0]</obj_property>
+         <obj_property name="label">EX2 ALU SRC 2</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_ex2_alu">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_alu[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_alu[31:0]</obj_property>
+         <obj_property name="label">EX2 ALU Result</obj_property>
+         <obj_property name="CustomSignalColor">#008000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group1412">
+      <obj_property name="label">ME Stage</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="vbus" fp_name="vbus289">
+         <obj_property name="label">PC1</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus539">
+         <obj_property name="label">PC2</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_memop/\MEM_OP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="label">EX1 Memory OP</obj_property>
+         <obj_property name="CustomSignalColor">#808080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_memop/\MEM_OP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="label">EX2 Memory OP</obj_property>
+         <obj_property name="CustomSignalColor">#808080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex1_sthaz">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex1_sthaz</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_sthaz</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">EX1 Store Hazard</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex2_sthaz">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_sthaz</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_sthaz</obj_property>
+         <obj_property name="CustomSignalColor">#FF0000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">EX2 Store Hazard</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me1_memop/\MEM_OP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME1 Memory OP</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me2_memop/\MEM_OP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[3:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[3:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME2 Memory OP</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/write_buffer[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME1 Write Buffer</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/write_buffer[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME2 Write Buffer</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/load_buffer[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="label">ME1 Load Buffer</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/load_buffer[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="label">ME2 Load Buffer</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/old_data[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="label">ME1 Old Data</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/old_data[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="label">ME2 Old Data</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/bitmask[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="label">ME1 Bitmask</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/bitmask[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="label">ME2 Bitmask</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/new_data[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME1 New Data</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/memory/new_data[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][31:0]</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME2 New Data</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/memory/write[2]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME1 Store</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/memory/write[3]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">ME2 Store</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me1_wtdat/Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="label">ME1 Store Data</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me2_wtdat/Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[31:0]</obj_property>
+         <obj_property name="label">ME2 Store Data</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_me1_memdat">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me1_memdat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_me1_memdat[31:0]</obj_property>
+         <obj_property name="label">ME1 Load Result</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_me2_memdat">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me2_memdat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_me2_memdat[31:0]</obj_property>
+         <obj_property name="label">ME2 Load Result</obj_property>
+         <obj_property name="CustomSignalColor">#E0FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group396">
+      <obj_property name="label">Data Hazard Detection</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="vbus" fp_name="vbus313">
+         <obj_property name="label">FLAG: Data Hazard</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">BINARYRADIX</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus5508">
+         <obj_property name="label">EX1 PC</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/r_ex1_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_alusrc1/\SRC1.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[1:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[1:0]</obj_property>
+         <obj_property name="label">EX1 SRC1</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_alusrc2/\SRC2.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[0:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+         <obj_property name="label">EX1 SRC2</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus5459">
+         <obj_property name="label">EX2 PC</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="CustomSignalColor">#00FF7F</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[1]">
+            <obj_property name="ElementShortName">[1]</obj_property>
+            <obj_property name="ObjectShortName">[1]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/r_ex2_pc_Q[0]">
+            <obj_property name="ElementShortName">[0]</obj_property>
+            <obj_property name="ObjectShortName">[0]</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_alusrc1/\SRC1.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[1:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[1:0]</obj_property>
+         <obj_property name="label">EX2 SRC1</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_alusrc2/\SRC2.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[0:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[0:0]</obj_property>
+         <obj_property name="label">EX2 SRC2</obj_property>
+         <obj_property name="CustomSignalColor">#008080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus2074">
+      <obj_property name="label">Data Forwarding</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_ex1_fwdA_sel">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex1_fwdA_sel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_fwdA_sel[2:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">EX1 FWDA SEL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/s_ex1_reg1_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex1_reg1_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_reg1_Q[31:0]</obj_property>
+         <obj_property name="label">EX1 REG1 VAL</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex1_stage/s_ex1_reg2_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex1_reg2_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_reg2_Q[31:0]</obj_property>
+         <obj_property name="label">EX1 REG2 VAL</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_ex2_fwdA_sel">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_fwdA_sel[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_fwdA_sel[2:0]</obj_property>
+         <obj_property name="CustomSignalColor">#FFA500</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="label">EX2 FWDA SEL</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/s_ex2_reg1_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_reg1_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_reg1_Q[31:0]</obj_property>
+         <obj_property name="label">EX2 REG1 VAL</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/ex2_stage/s_ex2_reg2_Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex2_reg2_Q[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_reg2_Q[31:0]</obj_property>
+         <obj_property name="label">EX2 REG2 VAL</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_me_rdA">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me_rdA[4:0]</obj_property>
+         <obj_property name="ObjectShortName">s_me_rdA[4:0]</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="label">ME rdA</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_me_rdB">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me_rdB[4:0]</obj_property>
+         <obj_property name="ObjectShortName">s_me_rdB[4:0]</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="label">ME rdB</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_me_fwdA">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me_fwdA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_me_fwdA[31:0]</obj_property>
+         <obj_property name="label">ME FWDA</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_me_fwdB">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me_fwdB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_me_fwdB[31:0]</obj_property>
+         <obj_property name="label">ME FWDB</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_wb_rdA">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_wb_rdA[4:0]</obj_property>
+         <obj_property name="ObjectShortName">s_wb_rdA[4:0]</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="label">WB rdA</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_wb_rdB">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_wb_rdB[4:0]</obj_property>
+         <obj_property name="ObjectShortName">s_wb_rdB[4:0]</obj_property>
+         <obj_property name="CustomSignalColor">#DCDCDC</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="label">WB rdB</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_wb_fwdA">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_wb_fwdA[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_wb_fwdA[31:0]</obj_property>
+         <obj_property name="label">WB FWDA</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_wb_fwdB">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_wb_fwdB[31:0]</obj_property>
+         <obj_property name="ObjectShortName">s_wb_fwdB[31:0]</obj_property>
+         <obj_property name="label">WB FWDB</obj_property>
+         <obj_property name="CustomSignalColor">#F0E68C</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus2073">
+      <obj_property name="label">Branching</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id_pcsrc">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_id_pcsrc</obj_property>
+         <obj_property name="ObjectShortName">s_id_pcsrc</obj_property>
+         <obj_property name="label">ID BRANCH</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_id1_branchop">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_id1_branchop[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s_id1_branchop[2:0]</obj_property>
+         <obj_property name="label">ID1 Branch OP</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/s_id2_branchop">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_id2_branchop[2:0]</obj_property>
+         <obj_property name="ObjectShortName">s_id2_branchop[2:0]</obj_property>
+         <obj_property name="label">ID2 Branch OP</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex_pcsrc">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex_pcsrc</obj_property>
+         <obj_property name="ObjectShortName">s_ex_pcsrc</obj_property>
+         <obj_property name="label">EX_BRANCH</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex1_branchop/\BRANCHOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[2:0]</obj_property>
+         <obj_property name="label">EX1 Branch OP</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_ex2_branchop/\BRANCHOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[2:0]</obj_property>
+         <obj_property name="label">EX2 Branch OP</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_me_pcsrc">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me_pcsrc</obj_property>
+         <obj_property name="ObjectShortName">s_me_pcsrc</obj_property>
+         <obj_property name="label">ME_BRANCH</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me1_branchop/\BRANCHOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[2:0]</obj_property>
+         <obj_property name="label">ME1 Branch OP</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/r_me2_branchop/\BRANCHOP.wrapper /Q">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">Q[2:0]</obj_property>
+         <obj_property name="ObjectShortName">Q[2:0]</obj_property>
+         <obj_property name="label">ME2 Branch OP</obj_property>
+         <obj_property name="CustomSignalColor">#FAAFBE</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus2452">
+      <obj_property name="label">Branch Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id_pcsrc">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_id_pcsrc</obj_property>
+         <obj_property name="ObjectShortName">s_id_pcsrc</obj_property>
+         <obj_property name="label">ID BRANCH</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex_pcsrc">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_ex_pcsrc</obj_property>
+         <obj_property name="ObjectShortName">s_ex_pcsrc</obj_property>
+         <obj_property name="label">EX_BRANCH</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_me_pcsrc">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">s_me_pcsrc</obj_property>
+         <obj_property name="ObjectShortName">s_me_pcsrc</obj_property>
+         <obj_property name="label">ME_BRANCH</obj_property>
+         <obj_property name="CustomSignalColor">#FF0080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus94">
+      <obj_property name="label">Flush Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_id_clear">
+         <obj_property name="ElementShortName">s_id_clear</obj_property>
+         <obj_property name="ObjectShortName">s_id_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex1_clear">
+         <obj_property name="ElementShortName">s_ex1_clear</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_me1_clear">
+         <obj_property name="ElementShortName">s_me1_clear</obj_property>
+         <obj_property name="ObjectShortName">s_me1_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_wb1_clear">
+         <obj_property name="ElementShortName">s_wb1_clear</obj_property>
+         <obj_property name="ObjectShortName">s_wb1_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_ex2_clear">
+         <obj_property name="ElementShortName">s_ex2_clear</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_me2_clear">
+         <obj_property name="ElementShortName">s_me2_clear</obj_property>
+         <obj_property name="ObjectShortName">s_me2_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/s_wb2_clear">
+         <obj_property name="ElementShortName">s_wb2_clear</obj_property>
+         <obj_property name="ObjectShortName">s_wb2_clear</obj_property>
+         <obj_property name="CustomSignalColor">#800080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="vbus" fp_name="vbus104">
+      <obj_property name="label">Stall Signals</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="CustomSignalColor">#0000A0</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id_coordination/s_id1_stall_D">
+         <obj_property name="ElementShortName">s_id1_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_id1_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex_coordination/s_ex1_stall_D">
+         <obj_property name="ElementShortName">s_ex1_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_ex1_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me_coordination/s_me1_stall_D">
+         <obj_property name="ElementShortName">s_me1_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_me1_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb_coordination/s_wb1_stall_D">
+         <obj_property name="ElementShortName">s_wb1_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_wb1_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/id_coordination/s_id2_stall_D">
+         <obj_property name="ElementShortName">s_id2_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_id2_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/ex_coordination/s_ex2_stall_D">
+         <obj_property name="ElementShortName">s_ex2_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_ex2_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/me_coordination/s_me2_stall_D">
+         <obj_property name="ElementShortName">s_me2_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_me2_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/riscv_tb/top/riscv32ia/core/wb_coordination/s_wb2_stall_D">
+         <obj_property name="ElementShortName">s_wb2_stall_D</obj_property>
+         <obj_property name="ObjectShortName">s_wb2_stall_D</obj_property>
+         <obj_property name="CustomSignalColor">#0000A0</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2445">
+      <obj_property name="label">Test 3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="group" fp_name="group2007">
+         <obj_property name="label">Setup</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
          <obj_property name="isExpanded"></obj_property>
-         <wvobject type="logic" fp_name="/riscv_tb/top/dcache/load">
-            <obj_property name="ElementShortName">load</obj_property>
-            <obj_property name="ObjectShortName">load</obj_property>
-            <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <wvobject type="group" fp_name="group7076">
+            <obj_property name="label">Alternating</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[18]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[18][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[18][31:0]</obj_property>
+               <obj_property name="label">x18</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[19]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[19][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[19][31:0]</obj_property>
+               <obj_property name="label">x19</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[20]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[20][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[20][31:0]</obj_property>
+               <obj_property name="label">x20</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[28]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[28][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[28][31:0]</obj_property>
+               <obj_property name="label">x28</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[29]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[29][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[29][31:0]</obj_property>
+               <obj_property name="label">x29</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="group" fp_name="group7424">
+            <obj_property name="label">Constants</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[10]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[10][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+               <obj_property name="label">x10</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[11]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[11][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+               <obj_property name="label">x11</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[12]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[12][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[12][31:0]</obj_property>
+               <obj_property name="label">x12</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[21]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[21][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[21][31:0]</obj_property>
+               <obj_property name="label">x21</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[22]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[22][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[22][31:0]</obj_property>
+               <obj_property name="label">x22</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[23]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[23][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[23][31:0]</obj_property>
+               <obj_property name="label">x23</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+            <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[24]">
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="ElementShortName">[24][31:0]</obj_property>
+               <obj_property name="ObjectShortName">[24][31:0]</obj_property>
+               <obj_property name="label">x24</obj_property>
+               <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+               <obj_property name="UseCustomSignalColor">true</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[1]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][31:0]</obj_property>
+         <obj_property name="label">x1</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[6]">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[6][31:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+         <obj_property name="label">x6</obj_property>
+         <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group427">
+         <obj_property name="label">SW Test</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[6]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[6][31:0]</obj_property>
+            <obj_property name="ObjectShortName">[6][31:0]</obj_property>
+            <obj_property name="label">x6</obj_property>
+            <obj_property name="CustomSignalColor">#00FFFF</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/dcache/read">
-            <obj_property name="ElementShortName">read</obj_property>
-            <obj_property name="ObjectShortName">read</obj_property>
-            <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[7]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[7][31:0]</obj_property>
+            <obj_property name="ObjectShortName">[7][31:0]</obj_property>
+            <obj_property name="label">x7</obj_property>
+            <obj_property name="CustomSignalColor">#00FFFF</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/riscv_tb/top/dcache/forward">
-            <obj_property name="ElementShortName">forward</obj_property>
-            <obj_property name="ObjectShortName">forward</obj_property>
-            <obj_property name="CustomSignalColor">#FFFFFF</obj_property>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[10]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[10][31:0]</obj_property>
+            <obj_property name="ObjectShortName">[10][31:0]</obj_property>
+            <obj_property name="label">x10</obj_property>
+            <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+            <obj_property name="UseCustomSignalColor">true</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/riscv_tb/top/riscv32ia/core/rf_xpr/RAM[11]">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">[11][31:0]</obj_property>
+            <obj_property name="ObjectShortName">[11][31:0]</obj_property>
+            <obj_property name="label">x11</obj_property>
+            <obj_property name="CustomSignalColor">#00FFFF</obj_property>
             <obj_property name="UseCustomSignalColor">true</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="array" fp_name="/riscv_tb/top/ahb_bus_matrix/s_hsel_out">
-      <obj_property name="ElementShortName">s_hsel_out[0:0]</obj_property>
-      <obj_property name="ObjectShortName">s_hsel_out[0:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+   <wvobject type="array" fp_name="/riscv_tb/top/bus/desires">
+      <obj_property name="ElementShortName">desires[3:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">desires[3:0][3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/bus/granted">
+      <obj_property name="ElementShortName">granted[3:0][3:0]</obj_property>
+      <obj_property name="ObjectShortName">granted[3:0][3:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/riscv_tb/top/bus/m_route/hrdata">
+      <obj_property name="ElementShortName">hrdata[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">hrdata[3:0][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>
