@@ -134,7 +134,7 @@ module AHB_GPIO #(
             Clock_Boundary switch_cb(HCLK, SW[i], SW_Sync[i]);
         end
         for (i=0; i<4; i=i+1) begin : async_switch
-            Clock_Boundary switch_cb(HCLK, btn[i], btn_sync[i]); 
+            Clock_Boundary btn_cb(HCLK, btn[i], btn_sync[i]); 
         end
     endgenerate
     // Map Switches to register
@@ -171,11 +171,30 @@ module AHB_GPIO #(
     
     
     
-    // Clear unused bits
-    always @(posedge HCLK) begin
+    // RESET !!!!!!
+    always @(posedge HCLK or negedge HRESETn) begin
+//        if btn[0] or the reset signal is low:
+//check hreset
+        if (HRESETn == 0)
+            begin
         GPIO[0][31:16] <= 16'd0;
         GPIO[1][31:22] <= 10'd0;
         GPIO[2][31:24] <= 8'd0;
+        GPIO[3][31:24] <= 8'd0;
+        GPIO[4][31:24] <= 8'd0;
+        GPIO[5][31:24] <= 8'd0;
+        
+        LED <= 16'd0;
+        RGB <= 6'd0;
+        D_7SEG <= 16'd0;
+        EN_7SEG <= 8'd0;
+        PmodA <= 8'd0;
+        PmodB <= 8'd0;
+        PmodAB <= 6'd0;
+        PmodC <= 8'd0;
+        PmodD <= 8'd0;
+        PmodCD <= 6'd0;
+        btn <= 4'd0;
     end
     
     // =========================================================================
@@ -258,6 +277,14 @@ module AHB_GPIO #(
 //            Q_reg <= D;
 //        end
 //    end
+
+
+    always @(posedge HCLK) begin
+        GPIO[0][31:16] <= 16'd0;
+        GPIO[1][31:22] <= 10'd0;
+        GPIO[2][31:24] <= 8'd0;
+    end
+
 endmodule
     
 
@@ -276,6 +303,22 @@ module Clock_Boundary #(SYNC_WIDTH=2) (
         sync_out <= boundary[SYNC_WIDTH-1];
     end
 endmodule
+
+
+//module Clock_Boundary #(SYNC_WIDTH=2) (
+//    input CLK,
+//    input btn[0],
+//    output reg rst_out
+//);
+//    reg [SYNC_WIDTH-1:0] boundary = {SYNC_WIDTH{1'b0}};
+//    always @(posedge CLK) begin
+//        if (~btn[0])
+//            boundary <= {SYNC_WIDTH{1'b0}};
+//        else
+//            boundary <= {boundary[SYNC_WIDTH-2:0], btn[0]};
+//        rst_out <= boundary[SYNC_WIDTH-1];
+//    end
+//endmodule
 
 
 //Check logic
