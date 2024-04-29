@@ -1,0 +1,3 @@
+[submodule "codasip"]
+	path = codasip
+	url = git@github.com:javo9205/4693-Codasip.git
