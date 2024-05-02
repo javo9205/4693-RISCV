@@ -31,6 +31,7 @@ module AHB_GPIO #(
     output wire [ 5:0] RGB,
     output wire [15:0] D_7SEG,
     output wire [ 7:0] EN_7SEG,
+    output wire [ 7:0] PmodA,
 
     // =========================================================================
     // Data and Addr Bus Signals                                              //
@@ -57,7 +58,7 @@ module AHB_GPIO #(
     // =========================================================================
     // Derived Constants                                                      //
     // =========================================================================
-    localparam GPIO_REGS    = 3;
+    localparam GPIO_REGS    = 4;
     localparam GRANULARITY  = $clog2(DATA_WIDTH / 8);   // 2^x byte addressable
     localparam INDEX_WIDTH  = $clog2(GPIO_REGS);        // #bits to index memory
     localparam INDEX_START  = INDEX_WIDTH + GRANULARITY;// Starting bit to index
@@ -107,6 +108,8 @@ module AHB_GPIO #(
     localparam SWITCHES = 0; // Index 0 for switches
     localparam LEDS = 1;     // Index 1 for LEDs
     localparam _7SEG = 2;    // Index 2 for 7 Segments
+    //New added !!!!
+    localparam _PMODAB = 3;
     
     // =========================================================================
     // Memory Map GPIO Pins
@@ -135,6 +138,8 @@ module AHB_GPIO #(
     assign D_7SEG  = GPIO[_7SEG][15:0];
     assign EN_7SEG = GPIO[_7SEG][23:16];
     assign read_only[_7SEG] = 1'b0;
+    
+    assign PmodA = GPIO[_PMODAB][11:0];
     
     // Clear unused bits
     always @(posedge HCLK) begin

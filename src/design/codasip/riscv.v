@@ -17,7 +17,7 @@
  *  \brief   Contains module definition of the 'riscv' ASIP.
  */
 
-module riscv32ia #(START_ADDRESS=32'h00001000) (
+module riscv32ia #(START_ADDRESS=32'h1000) (
     input  wire CLK,
     input  wire RST,
     input  wire [31:0] if_code_HRDATA,

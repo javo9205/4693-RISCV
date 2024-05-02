@@ -28,8 +28,8 @@ module riscv_top(
     localparam ADDR_WIDTH=32;
     localparam DATA_WIDTH=32;
     localparam NUM_SLAVES=2;
-    localparam SLAVE_BASE_ADDR = {32'h8000,32'h0000};
-    localparam SLAVE_LAST_ADDR = {32'h8002,32'h7FFF};
+    localparam SLAVE_BASE_ADDR = {32'h8000,32'hFFFF8000};
+    localparam SLAVE_LAST_ADDR = {32'h8004,32'hFFFFFFFF};
 
 	wire [ADDR_WIDTH-1:0] m_haddr;
 	wire [DATA_WIDTH-1:0] m_hrdata;
@@ -69,7 +69,7 @@ module riscv_top(
 	wire [0:0] i_hresp;
 	wire [0:0] i_hready;
 
-//    assign LED = {2'b0, i_haddr[13:2], 2'b0};
+    assign LED = {2'b0, i_haddr[13:2], 2'b0};
     assign i_hwdata = 32'h0;
     
 
@@ -138,7 +138,7 @@ module riscv_top(
 
     AHB_Cache #(
         .INITIALIZE(1),
-        .INIT_FILE(ROM_FILE)
+        .INIT_FILE("hello.mem")
     ) icache(
         .HCLK(CLK),
         .HRESETn(RST),
@@ -179,7 +179,7 @@ module riscv_top(
         .START_ADDR(SLAVE_BASE_ADDR[63:32])
     ) gpio (
         .SW (SW),
-        .LED(LED),
+//        .LED(LED),
         .RGB(RGB),
         .D_7SEG (D_7SEG),
         .EN_7SEG(EN_7SEG),
